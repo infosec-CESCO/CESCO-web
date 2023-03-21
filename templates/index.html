@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Solidity Vulnerability Analyzer</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-3">Solidity Vulnerability Analyzer</h1>
+      {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger">{{ message }}</div>
+      {% endfor %}
+      <form action="/" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="file" class="form-label">Upload a Solidity file:</label>
+          <input type="file" name="file" class="form-control" id="file">
+        </div>
+        <div class="mb-3">
+          <label for="code" class="form-label">Or enter Solidity code:</label>
+          <textarea name="code" id="code" rows="10" class="form-control">{{ request.form.get('code', '') }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Analyze</button>
+      </form>
+      {% if mythril_output %}
+        <div class="mythril-output mt-4">
+          <h2>Mythril Analysis Results:</h2>
+          <pre>{{ mythril_output }}</pre>
+        </div>
+      {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

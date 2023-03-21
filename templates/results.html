@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solidity Vulnerability Analyzer - Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+
+    {% if results %}
+        <h3>Issues:</h3>
+        <ul>
+            {% for issue in results.issues %}
+                <li>
+                    <strong>Title:</strong> {{ issue.title }}<br>
+                    <strong>Description:</strong> {{ issue.description }}<br>
+                    <strong>Severity:</strong> {{ issue.severity }}<br>
+                    <strong>Contract:</strong> {{ issue.contract }}<br>
+                    <strong>Function:</strong> {{ issue.function }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No issues found.</p>
+    {% endif %
