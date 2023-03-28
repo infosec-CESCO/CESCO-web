@@ -8,7 +8,8 @@ import subprocess
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your-secret-key"
 
-MYTHRIL_PATH = "/path/to/mythril"  # Update this with your Mythril path
+MYTHRIL_PATH = "/home/ppakjae/Downloads/mythril-0.23.17/myth"  # Update this with your Mythril path
+# MYTHRIL_PATH = "/home/infosec/Desktop/mythril-develop/myth"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -38,21 +39,18 @@ def index():
         else:
             flash("Please provide a Solidity file or enter the code.")
             return render_template("index.html")
-
-        # mythril_cli = "/home/ppakjae/Downloads/mythril-0.23.17/myth"
-        mythril_cli = "/home/infosec/Desktop/mythril-develop/myth"
         
         try:
             # 모드 변경은 여기서 하면 될듯 
             # switch 문을 통해 disassemble, analyze 가능할듯
             if mode == "analyze":
                 mythril_output = subprocess.check_output(
-                    [mythril_cli, "analyze", file_path],
+                    [MYTHRIL_PATH, "analyze", file_path],
                     stderr=subprocess.PIPE,
                 ).decode("utf-8")
             elif mode == "disassemble":
                 mythril_output = subprocess.check_output(
-                    [mythril_cli, "disassemble", file_path],
+                    [MYTHRIL_PATH, "disassemble", file_path],
                     stderr=subprocess.PIPE,
                 ).decode("utf-8")
 
@@ -70,6 +68,10 @@ def index():
         return render_template("index.html", mythril_output=mythril_output, mythril_json=mythril_json)
 
     return render_template("index.html")
+
+@app.route("/opcodes", methods=["GET", "POST"])
+def opcodes():
+    return render_template("opcodes.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
