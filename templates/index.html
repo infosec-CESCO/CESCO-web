@@ -1,105 +1,54 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>CESCO</title>
-    
-    <style>
-      #spinner {
-            display: block;
-        }
+{% extends "base.html" %}
 
-        #spinner.show {
-            display: block;
-        }
-    </style>
+{#{% block content %}#}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">#}
+{#{% endblock %}#}
 
-    <script>
-
-    </script>
-
-  </head>
-  
-  <body>
+{% block content %}
     <div class="container mt-5">
-      <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg> -->
-            CESCO
-          </a>
-    
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">SWC-취약점</a></li>
-            <li><a href="/opcodes" class="nav-link px-2 link-dark">Opcodes</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">개발 진행</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-          </ul>
-    
-          <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
-          </div>
-        </header>
-      </div>
-      <!-- <h1 class="mb-3">Solidity Vulnerability Analyzer</h1> -->
-      
-      {% for message in get_flashed_messages() %}
-        <div class="alert alert-danger">{{ message }}</div>
-      {% endfor %}
-      
-      <p>선택입력</p>
-      
-      <form action="/" method="POST" enctype="multipart/form-data" id = "myForm">
-        
-        <select name="mode" id = "mode">
-          <option value = "analyze"> analyze
-          <option value = "disassemble"> disassemble
-          <option value = "safefunction"> safe function
-        </select>
-        
-        <div class="mb-3">
-          <label for="file" class="form-label">Upload a Solidity file:</label>
-          <input type="file" name="file" class="form-control" id="file">
-        </div>
-        
-        <div class="mb-3">
-          <label for="code" class="form-label">Or enter Solidity code:</label>
-          <textarea name="code" id="code" rows="10" class="form-control">{{ request.form.get('code', '') }}</textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Analyze</button>
-      </form>
+        <!-- <h1 class="mb-3">Solidity Vulnerability Analyzer</h1> -->
 
-      <div class="spinner-border text-primary" role="status" id = "spinner">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-      
-      {% if mythril_output %}
-        <div class="mythril-output mt-4">
-          <h2>Mythril Analysis Results:</h2>
-          <pre>{{ mythril_output }}</pre>
-        </div>
-      
-      {% endif %}
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %}
 
-        <div class="container">
-          <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-              <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">SWC-취약점</a></li>
-              <li class="nav-item"><a href="opcodes.html" class="nav-link px-2 text-muted">Opcodes</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">개발진행</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            </ul>
-            <p class="text-center text-muted">&copy; 2023 CESCO</p>
-          </footer>
+        <p>선택입력</p>
+
+        <form action="/" method="POST" enctype="multipart/form-data" id="myForm">
+
+            <select name="mode" id="mode">
+                <option value="analyze"> analyze
+                <option value="disassemble"> disassemble
+                <option value="safefunction"> safe function
+            </select>
+
+            <div class="mb-3">
+                <label for="file" class="form-label">Upload a Solidity file:</label>
+                <input type="file" name="file" class="form-control" id="file">
+            </div>
+
+            <div class="mb-3">
+                <label for="code" class="form-label">Or enter Solidity code:</label>
+                <textarea name="code" id="code" rows="10"
+                          class="form-control">{{ request.form.get('code', '') }}</textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Analyze</button>
+        </form>
+
+        <div class="spinner-border text-primary" role="status" id="spinner">
+            <span class="visually-hidden">Loading...</span>
         </div>
+
+        {% if mythril_output %}
+            <div class="mythril-output mt-4">
+                <h2>Mythril Analysis Results:</h2>
+                <pre>{{ mythril_output }}</pre>
+            </div>
+
+        {% endif %}
     </div>
-    
+
     <!-- <script>
       const form = document.querySelector('#myForm');
       const spinner = document.querySelector('#spinner');
@@ -125,8 +74,7 @@
           });
       });
   </script> -->
-    
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script> -->
-  </body>
 
-</html>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+{% endblock %}

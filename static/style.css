@@ -1,0 +1,7 @@
+#spinner {
+    display: block;
+}
+
+#spinner.show {
+    display: block;
+}

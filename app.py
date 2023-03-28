@@ -8,7 +8,7 @@ import subprocess
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your-secret-key"
 
-MYTHRIL_PATH = "/home/ppakjae/Downloads/mythril-0.23.17/myth"  # Update this with your Mythril path
+MYTHRIL_PATH = "/home/ppakjae/Downloads/mythril-0.23.17/myth"
 # MYTHRIL_PATH = "/home/infosec/Desktop/mythril-develop/myth"
 
 @app.route("/", methods=["GET", "POST"])
