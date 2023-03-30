@@ -1,0 +1,31 @@
+## Stack input
+
+0. `key`: 32-byte key in [storage](/about).
+1. `value`: 32-byte value to store.
+
+## Examples
+
+| * | Input 1 | * | * | Input 2 |
+|--:|--------:|--:|--:|--------:|
+| `1` | `0` | * | `1` | `8965` |
+| `2` | `0xFFFF` | * | `2` | `0xFF` |
+
+| Storage key before | Storage value |
+|-------------------:|--------------:|
+| | |
+
+| Storage key after input 1 | Storage value |
+|--------------------------:|--------------:|
+| `0` | `0xFFFF` |
+
+| Storage key after input 1 then 2 | Storage value |
+|---------------------------------:|--------------:|
+| `0` | `0xFFFF` |
+| `8965` | `0xFF` |
+
+## Error cases
+
+The state changes done by the current context are [reverted](#FD) in those cases:
+- Not enough gas.
+- Not enough values on the stack.
+- The current execution context is from a [STATICCALL](/#FA) (since Byzantium fork).

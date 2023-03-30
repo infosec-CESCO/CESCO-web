@@ -1,0 +1,21 @@
+## Stack input
+
+0. `a`: integer base.
+1. `exponent`: integer exponent.
+
+## Stack output
+
+0. `a ** exponent`: integer result of the exponential operation modulo 2<sup>256</sup>.
+
+## Examples
+
+| * | Input | Output | * | * | Input | Output |
+|--:|------:|-------:|--:|--:|------:|-------:|
+| `1` | `10` | `100` | * | `1` | `2` | `4` |
+| `2` | `2` | | * | `2` | `2` | |
+
+## Error cases
+
+The state changes done by the current context are [reverted](#FD) in those cases:
+- Not enough gas.
+- Not enough values on the stack.
