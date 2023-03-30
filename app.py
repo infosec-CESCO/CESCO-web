@@ -39,7 +39,7 @@ def index():
         else:
             flash("Please provide a Solidity file or enter the code.")
             return render_template("index.html")
-        
+
         try:
             # 모드 변경은 여기서 하면 될듯 
             # switch 문을 통해 disassemble, analyze 가능할듯
@@ -69,9 +69,12 @@ def index():
 
     return render_template("index.html")
 
+
 @app.route("/opcodes", methods=["GET", "POST"])
 def opcodes():
-    return render_template("opcodes.html")
+    with open("opcodes.json", 'r') as f:
+        data = json.load(f)
+    return render_template("opcodes.html", table_data=data)
 
 if __name__ == "__main__":
     app.run(debug=True)

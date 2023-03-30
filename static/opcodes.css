@@ -56,12 +56,15 @@
   height: 60px;
 }
 
-.discription{
+.description{
   background-color: rgb(238 242 255);
 }
 
+.markdown-body{
+  padding: 30px;
+}
+
 .box_item{
-  /* width: 10px; */
   border: 1.7px solid skyblue;
   float: left;
   margin-left: 10px;
