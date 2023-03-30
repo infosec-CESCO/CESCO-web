@@ -1,69 +1,15 @@
 {% extends "base.html" %}
 
 {% block static %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='opcodes.css') }}">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/">
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='sidebars.css') }}">
-    <script type="text/javascript" src="{{ url_for('static', filename='sidebars.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
-
-    <style>
-        .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swc.css') }}">
 {% endblock %}
 
 {% block js %}
-    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/sidebars.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -73,7 +19,6 @@
             <p style = "margin-top: 15px; margin-bottom: 15px; font-size: 17px; font-weight: 400;">In this guide, we'll be exploring the various types of vulnerabilities that can exist in smart contracts, as well as their potential impact and how to mitigate them. <br>Whether you're a developer, investor, or just interested in learning more about smart contracts, this guide will provide you with valuable insights into this rapidly evolving field.</p>
         </div>
         <br>
-        
 
         <section style ="display: flex;">
 

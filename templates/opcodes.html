@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% block static %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='opcodes.css') }}">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/opcodes.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 {% endblock %}
 
 {% block js %}
     <script src="https://cdn.jsdelivr.net/npm/markdown-it@12.3.1/dist/markdown-it.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='opcodes.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/opcodes.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -48,7 +47,7 @@
                 </thead>
                 <tbody>
                 {% for row_data in table_data %}
-                    <tr onclick="toggleRow(this, '{{ table_data[row_data]['opcode_markdown'] }}')" class="opcode">
+                    <tr onclick="toggleRow(this, '{{ table_data[row_data]['markdown'] }}')" class="opcode">
                         <td>
                             <div style="flex-wrap: nowrap" class="content">
                                 {{ row_data.upper() }}
