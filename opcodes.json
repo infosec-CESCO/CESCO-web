@@ -5,7 +5,7 @@
     "input": "",
     "output": "",
     "description": "Halts execution",
-    "markdown": "/static/markdown/00.mdx"
+    "opcode_markdown": "/static/opcode_markdown/00.mdx"
   },
   "01": {
     "name": "ADD",
@@ -13,7 +13,7 @@
     "input": "a | b",
     "output": "a + b",
     "description": "Addition operation",
-    "markdown": "/static/markdown/01.mdx"
+    "opcode_markdown": "/static/opcode_markdown/01.mdx"
   },
   "02": {
     "name": "MUL",
@@ -21,7 +21,7 @@
     "input": "a | b",
     "output": "a * b",
     "description": "Multiplication operation",
-    "markdown": "/static/markdown/02.mdx"
+    "opcode_markdown": "/static/opcode_markdown/02.mdx"
   },
   "03": {
     "name": "SUB",
@@ -29,7 +29,7 @@
     "input": "a | b",
     "output": "a - b",
     "description": "Subtraction operation",
-    "markdown": "/static/markdown/03.mdx"
+    "opcode_markdown": "/static/opcode_markdown/03.mdx"
   },
   "04": {
     "name": "DIV",
@@ -37,7 +37,7 @@
     "input": "a | b",
     "output": "a // b",
     "description": "Integer division operation",
-    "markdown": "/static/markdown/04.mdx"
+    "opcode_markdown": "/static/opcode_markdown/04.mdx"
   },
   "05": {
     "name": "SDIV",
@@ -45,7 +45,7 @@
     "input": "a | b",
     "output": "a // b",
     "description": "Signed integer division operation (truncated)",
-    "markdown": "/static/markdown/05.mdx"
+    "opcode_markdown": "/static/opcode_markdown/05.mdx"
   },
   "06": {
     "name": "MOD",
@@ -53,7 +53,7 @@
     "input": "a | b",
     "output": "a % b",
     "description": "Modulo remainder operation",
-    "markdown": "/static/markdown/06.mdx"
+    "opcode_markdown": "/static/opcode_markdown/06.mdx"
   },
   "07": {
     "name": "SMOD",
@@ -61,7 +61,7 @@
     "input": "a | b",
     "output": "a % b",
     "description": "Signed modulo remainder operation",
-    "markdown": "/static/markdown/07.mdx"
+    "opcode_markdown": "/static/opcode_markdown/07.mdx"
   },
   "08": {
     "name": "ADDMOD",
@@ -69,7 +69,7 @@
     "input": "a | b | N",
     "output": "(a + b) % N",
     "description": "Modulo addition operation",
-    "markdown": "/static/markdown/08.mdx"
+    "opcode_markdown": "/static/opcode_markdown/08.mdx"
   },
   "09": {
     "name": "MULMOD",
@@ -77,7 +77,7 @@
     "input": "a | b | N",
     "output": "(a * b) % N",
     "description": "Modulo multiplication operation",
-    "markdown": "/static/markdown/09.mdx"
+    "opcode_markdown": "/static/opcode_markdown/09.mdx"
   },
   "0a": {
     "name": "EXP",
@@ -85,7 +85,7 @@
     "input": "a | exponent",
     "output": "a ** exponent",
     "description": "Exponential operation",
-    "markdown": "/static/markdown/0A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/0A.mdx"
   },
   "0b": {
     "name": "SIGNEXTEND",
@@ -93,7 +93,7 @@
     "input": "b | x",
     "output": "y",
     "description": "Extend length of two’s complement signed integer",
-    "markdown": "/static/markdown/0B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/0B.mdx"
   },
   "10": {
     "name": "LT",
@@ -101,7 +101,7 @@
     "input": "a | b",
     "output": "a < b",
     "description": "Less-than comparison",
-    "markdown": "/static/markdown/10.mdx"
+    "opcode_markdown": "/static/opcode_markdown/10.mdx"
   },
   "11": {
     "name": "GT",
@@ -109,7 +109,7 @@
     "input": "a | b",
     "output": "a > b",
     "description": "Greater-than comparison",
-    "markdown": "/static/markdown/11.mdx"
+    "opcode_markdown": "/static/opcode_markdown/11.mdx"
   },
   "12": {
     "name": "SLT",
@@ -117,7 +117,7 @@
     "input": "a | b",
     "output": "a < b",
     "description": "Signed less-than comparison",
-    "markdown": "/static/markdown/12.mdx"
+    "opcode_markdown": "/static/opcode_markdown/12.mdx"
   },
   "13": {
     "name": "SGT",
@@ -125,7 +125,7 @@
     "input": "a | b",
     "output": "a > b",
     "description": "Signed greater-than comparison",
-    "markdown": "/static/markdown/13.mdx"
+    "opcode_markdown": "/static/opcode_markdown/13.mdx"
   },
   "14": {
     "name": "EQ",
@@ -133,7 +133,7 @@
     "input": "a | b",
     "output": "a == b",
     "description": "Equality comparison",
-    "markdown": "/static/markdown/14.mdx"
+    "opcode_markdown": "/static/opcode_markdown/14.mdx"
   },
   "15": {
     "name": "ISZERO",
@@ -141,7 +141,7 @@
     "input": "a",
     "output": "a == 0",
     "description": "Simple not operator",
-    "markdown": "/static/markdown/15.mdx"
+    "opcode_markdown": "/static/opcode_markdown/15.mdx"
   },
   "16": {
     "name": "AND",
@@ -149,7 +149,7 @@
     "input": "a | b",
     "output": "a & b",
     "description": "Bitwise AND operation",
-    "markdown": "/static/markdown/16.mdx"
+    "opcode_markdown": "/static/opcode_markdown/16.mdx"
   },
   "17": {
     "name": "OR",
@@ -157,7 +157,7 @@
     "input": "a | b",
     "output": "a \\| b",
     "description": "Bitwise OR operation",
-    "markdown": "/static/markdown/17.mdx"
+    "opcode_markdown": "/static/opcode_markdown/17.mdx"
   },
   "18": {
     "name": "XOR",
@@ -165,7 +165,7 @@
     "input": "a | b",
     "output": "a ^ b",
     "description": "Bitwise XOR operation",
-    "markdown": "/static/markdown/18.mdx"
+    "opcode_markdown": "/static/opcode_markdown/18.mdx"
   },
   "19": {
     "name": "NOT",
@@ -173,7 +173,7 @@
     "input": "a",
     "output": "~a",
     "description": "Bitwise NOT operation",
-    "markdown": "/static/markdown/19.mdx"
+    "opcode_markdown": "/static/opcode_markdown/19.mdx"
   },
   "1a": {
     "name": "BYTE",
@@ -181,7 +181,7 @@
     "input": "i | x",
     "output": "y",
     "description": "Retrieve single byte from word",
-    "markdown": "/static/markdown/1A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/1A.mdx"
   },
   "1b": {
     "name": "SHL",
@@ -189,7 +189,7 @@
     "input": "shift | value",
     "output": "value << shift",
     "description": "Left shift operation",
-    "markdown": "/static/markdown/1B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/1B.mdx"
   },
   "1c": {
     "name": "SHR",
@@ -197,7 +197,7 @@
     "input": "shift | value",
     "output": "value >> shift",
     "description": "Logical right shift operation",
-    "markdown": "/static/markdown/1C.mdx"
+    "opcode_markdown": "/static/opcode_markdown/1C.mdx"
   },
   "1d": {
     "name": "SAR",
@@ -205,7 +205,7 @@
     "input": "shift | value",
     "output": "value >> shift",
     "description": "Arithmetic (signed) right shift operation",
-    "markdown": "/static/markdown/1D.mdx"
+    "opcode_markdown": "/static/opcode_markdown/1D.mdx"
   },
   "20": {
     "name": "SHA3",
@@ -213,7 +213,7 @@
     "input": "offset | size",
     "output": "hash",
     "description": "Compute Keccak-256 hash",
-    "markdown": "/static/markdown/20.mdx"
+    "opcode_markdown": "/static/opcode_markdown/20.mdx"
   },
   "30": {
     "name": "ADDRESS",
@@ -221,7 +221,7 @@
     "input": "",
     "output": "address",
     "description": "Get address of currently executing account",
-    "markdown": "/static/markdown/30.mdx"
+    "opcode_markdown": "/static/opcode_markdown/30.mdx"
   },
   "31": {
     "name": "BALANCE",
@@ -229,7 +229,7 @@
     "input": "address",
     "output": "balance",
     "description": "Get balance of the given account",
-    "markdown": "/static/markdown/31.mdx"
+    "opcode_markdown": "/static/opcode_markdown/31.mdx"
   },
   "32": {
     "name": "ORIGIN",
@@ -237,7 +237,7 @@
     "input": "",
     "output": "address",
     "description": "Get execution origination address",
-    "markdown": "/static/markdown/32.mdx"
+    "opcode_markdown": "/static/opcode_markdown/32.mdx"
   },
   "33": {
     "name": "CALLER",
@@ -245,7 +245,7 @@
     "input": "",
     "output": "address",
     "description": "Get caller address",
-    "markdown": "/static/markdown/33.mdx"
+    "opcode_markdown": "/static/opcode_markdown/33.mdx"
   },
   "34": {
     "name": "CALLVALUE",
@@ -253,7 +253,7 @@
     "input": "",
     "output": "value",
     "description": "Get deposited value by the instruction/transaction responsible for this execution",
-    "markdown": "/static/markdown/34.mdx"
+    "opcode_markdown": "/static/opcode_markdown/34.mdx"
   },
   "35": {
     "name": "CALLDATALOAD",
@@ -261,7 +261,7 @@
     "input": "i",
     "output": "data[i]",
     "description": "Get input data of current environment",
-    "markdown": "/static/markdown/35.mdx"
+    "opcode_markdown": "/static/opcode_markdown/35.mdx"
   },
   "36": {
     "name": "CALLDATASIZE",
@@ -269,7 +269,7 @@
     "input": "",
     "output": "size",
     "description": "Get size of input data in current environment",
-    "markdown": "/static/markdown/36.mdx"
+    "opcode_markdown": "/static/opcode_markdown/36.mdx"
   },
   "37": {
     "name": "CALLDATACOPY",
@@ -277,7 +277,7 @@
     "input": "destOffset | offset | size",
     "output": "",
     "description": "Copy input data in current environment to memory",
-    "markdown": "/static/markdown/37.mdx"
+    "opcode_markdown": "/static/opcode_markdown/37.mdx"
   },
   "38": {
     "name": "CODESIZE",
@@ -285,7 +285,7 @@
     "input": "",
     "output": "size",
     "description": "Get size of code running in current environment",
-    "markdown": "/static/markdown/38.mdx"
+    "opcode_markdown": "/static/opcode_markdown/38.mdx"
   },
   "39": {
     "name": "CODECOPY",
@@ -293,7 +293,7 @@
     "input": "destOffset | offset | size",
     "output": "",
     "description": "Copy code running in current environment to memory",
-    "markdown": "/static/markdown/39.mdx"
+    "opcode_markdown": "/static/opcode_markdown/39.mdx"
   },
   "3a": {
     "name": "GASPRICE",
@@ -301,7 +301,7 @@
     "input": "",
     "output": "price",
     "description": "Get price of gas in current environment",
-    "markdown": "/static/markdown/3A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/3A.mdx"
   },
   "3b": {
     "name": "EXTCODESIZE",
@@ -309,7 +309,7 @@
     "input": "address",
     "output": "size",
     "description": "Get size of an account’s code",
-    "markdown": "/static/markdown/3B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/3B.mdx"
   },
   "3c": {
     "name": "EXTCODECOPY",
@@ -317,7 +317,7 @@
     "input": "address | destOffset | offset | size",
     "output": "",
     "description": "Copy an account’s code to memory",
-    "markdown": "/static/markdown/3C.mdx"
+    "opcode_markdown": "/static/opcode_markdown/3C.mdx"
   },
   "3d": {
     "name": "RETURNDATASIZE",
@@ -325,7 +325,7 @@
     "input": "",
     "output": "size",
     "description": "Get size of output data from the previous call from the current environment",
-    "markdown": "/static/markdown/3D.mdx"
+    "opcode_markdown": "/static/opcode_markdown/3D.mdx"
   },
   "3e": {
     "name": "RETURNDATACOPY",
@@ -333,7 +333,7 @@
     "input": "destOffset | offset | size",
     "output": "",
     "description": "Copy output data from the previous call to memory",
-    "markdown": "/static/markdown/3E.mdx"
+    "opcode_markdown": "/static/opcode_markdown/3E.mdx"
   },
   "3f": {
     "name": "EXTCODEHASH",
@@ -341,7 +341,7 @@
     "input": "address",
     "output": "hash",
     "description": "Get hash of an account’s code",
-    "markdown": "/static/markdown/3F.mdx"
+    "opcode_markdown": "/static/opcode_markdown/3F.mdx"
   },
   "40": {
     "name": "BLOCKHASH",
@@ -349,7 +349,7 @@
     "input": "blockNumber",
     "output": "hash",
     "description": "Get the hash of one of the 256 most recent complete blocks",
-    "markdown": "/static/markdown/40.mdx"
+    "opcode_markdown": "/static/opcode_markdown/40.mdx"
   },
   "41": {
     "name": "COINBASE",
@@ -357,7 +357,7 @@
     "input": "",
     "output": "address",
     "description": "Get the block’s beneficiary address",
-    "markdown": "/static/markdown/41.mdx"
+    "opcode_markdown": "/static/opcode_markdown/41.mdx"
   },
   "42": {
     "name": "TIMESTAMP",
@@ -365,7 +365,7 @@
     "input": "",
     "output": "timestamp",
     "description": "Get the block’s timestamp",
-    "markdown": "/static/markdown/42.mdx"
+    "opcode_markdown": "/static/opcode_markdown/42.mdx"
   },
   "43": {
     "name": "NUMBER",
@@ -373,7 +373,7 @@
     "input": "",
     "output": "blockNumber",
     "description": "Get the block’s number",
-    "markdown": "/static/markdown/43.mdx"
+    "opcode_markdown": "/static/opcode_markdown/43.mdx"
   },
   "44": {
     "name": "PREVRANDAO",
@@ -381,7 +381,7 @@
     "input": "",
     "output": "difficulty",
     "description": "Get the block’s difficulty",
-    "markdown": "/static/markdown/44.mdx"
+    "opcode_markdown": "/static/opcode_markdown/44.mdx"
   },
   "45": {
     "name": "GASLIMIT",
@@ -389,7 +389,7 @@
     "input": "",
     "output": "gasLimit",
     "description": "Get the block’s gas limit",
-    "markdown": "/static/markdown/45.mdx"
+    "opcode_markdown": "/static/opcode_markdown/45.mdx"
   },
   "46": {
     "name": "CHAINID",
@@ -397,7 +397,7 @@
     "input": "",
     "output": "chainId",
     "description": "Get the chain ID",
-    "markdown": "/static/markdown/46.mdx"
+    "opcode_markdown": "/static/opcode_markdown/46.mdx"
   },
   "47": {
     "name": "SELFBALANCE",
@@ -405,7 +405,7 @@
     "input": "",
     "output": "balance",
     "description": "Get balance of currently executing account",
-    "markdown": "/static/markdown/47.mdx"
+    "opcode_markdown": "/static/opcode_markdown/47.mdx"
   },
   "48": {
     "name": "BASEFEE",
@@ -413,7 +413,7 @@
     "input": "",
     "output": "baseFee",
     "description": "Get the base fee",
-    "markdown": "/static/markdown/48.mdx"
+    "opcode_markdown": "/static/opcode_markdown/48.mdx"
   },
   "50": {
     "name": "POP",
@@ -421,7 +421,7 @@
     "input": "y",
     "output": "",
     "description": "Remove item from stack",
-    "markdown": "/static/markdown/50.mdx"
+    "opcode_markdown": "/static/opcode_markdown/50.mdx"
   },
   "51": {
     "name": "MLOAD",
@@ -429,7 +429,7 @@
     "input": "offset",
     "output": "value",
     "description": "Load word from memory",
-    "markdown": "/static/markdown/51.mdx"
+    "opcode_markdown": "/static/opcode_markdown/51.mdx"
   },
   "52": {
     "name": "MSTORE",
@@ -437,7 +437,7 @@
     "input": "offset | value",
     "output": "",
     "description": "Save word to memory",
-    "markdown": "/static/markdown/52.mdx"
+    "opcode_markdown": "/static/opcode_markdown/52.mdx"
   },
   "53": {
     "name": "MSTORE8",
@@ -445,7 +445,7 @@
     "input": "offset | value",
     "output": "",
     "description": "Save byte to memory",
-    "markdown": "/static/markdown/53.mdx"
+    "opcode_markdown": "/static/opcode_markdown/53.mdx"
   },
   "54": {
     "name": "SLOAD",
@@ -453,7 +453,7 @@
     "input": "key",
     "output": "value",
     "description": "Load word from storage",
-    "markdown": "/static/markdown/54.mdx"
+    "opcode_markdown": "/static/opcode_markdown/54.mdx"
   },
   "55": {
     "name": "SSTORE",
@@ -461,7 +461,7 @@
     "input": "key | value",
     "output": "",
     "description": "Save word to storage",
-    "markdown": "/static/markdown/55.mdx"
+    "opcode_markdown": "/static/opcode_markdown/55.mdx"
   },
   "56": {
     "name": "JUMP",
@@ -469,7 +469,7 @@
     "input": "counter",
     "output": "",
     "description": "Alter the program counter",
-    "markdown": "/static/markdown/56.mdx"
+    "opcode_markdown": "/static/opcode_markdown/56.mdx"
   },
   "57": {
     "name": "JUMPI",
@@ -477,7 +477,7 @@
     "input": "counter | b",
     "output": "",
     "description": "Conditionally alter the program counter",
-    "markdown": "/static/markdown/57.mdx"
+    "opcode_markdown": "/static/opcode_markdown/57.mdx"
   },
   "58": {
     "name": "PC",
@@ -485,7 +485,7 @@
     "input": "",
     "output": "counter",
     "description": "Get the value of the program counter prior to the increment corresponding to this instruction",
-    "markdown": "/static/markdown/58.mdx"
+    "opcode_markdown": "/static/opcode_markdown/58.mdx"
   },
   "59": {
     "name": "MSIZE",
@@ -493,7 +493,7 @@
     "input": "",
     "output": "size",
     "description": "Get the size of active memory in bytes",
-    "markdown": "/static/markdown/59.mdx"
+    "opcode_markdown": "/static/opcode_markdown/59.mdx"
   },
   "5a": {
     "name": "GAS",
@@ -501,7 +501,7 @@
     "input": "",
     "output": "gas",
     "description": "Get the amount of available gas, including the corresponding reduction for the cost of this instruction",
-    "markdown": "/static/markdown/5A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/5A.mdx"
   },
   "5b": {
     "name": "JUMPDEST",
@@ -509,7 +509,7 @@
     "input": "",
     "output": "",
     "description": "Mark a valid destination for jumps",
-    "markdown": "/static/markdown/5B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/5B.mdx"
   },
   "60": {
     "name": "PUSH1",
@@ -517,7 +517,7 @@
     "input": "",
     "output": "value",
     "description": "Place 1 byte item on stack",
-    "markdown": "/static/markdown/60.mdx"
+    "opcode_markdown": "/static/opcode_markdown/60.mdx"
   },
   "61": {
     "name": "PUSH2",
@@ -525,7 +525,7 @@
     "input": "",
     "output": "value",
     "description": "Place 2 byte item on stack",
-    "markdown": "/static/markdown/61.mdx"
+    "opcode_markdown": "/static/opcode_markdown/61.mdx"
   },
   "62": {
     "name": "PUSH3",
@@ -533,7 +533,7 @@
     "input": "",
     "output": "value",
     "description": "Place 3 byte item on stack",
-    "markdown": "/static/markdown/62.mdx"
+    "opcode_markdown": "/static/opcode_markdown/62.mdx"
   },
   "63": {
     "name": "PUSH4",
@@ -541,7 +541,7 @@
     "input": "",
     "output": "value",
     "description": "Place 4 byte item on stack",
-    "markdown": "/static/markdown/63.mdx"
+    "opcode_markdown": "/static/opcode_markdown/63.mdx"
   },
   "64": {
     "name": "PUSH5",
@@ -549,7 +549,7 @@
     "input": "",
     "output": "value",
     "description": "Place 5 byte item on stack",
-    "markdown": "/static/markdown/64.mdx"
+    "opcode_markdown": "/static/opcode_markdown/64.mdx"
   },
   "65": {
     "name": "PUSH6",
@@ -557,7 +557,7 @@
     "input": "",
     "output": "value",
     "description": "Place 6 byte item on stack",
-    "markdown": "/static/markdown/65.mdx"
+    "opcode_markdown": "/static/opcode_markdown/65.mdx"
   },
   "66": {
     "name": "PUSH7",
@@ -565,7 +565,7 @@
     "input": "",
     "output": "value",
     "description": "Place 7 byte item on stack",
-    "markdown": "/static/markdown/66.mdx"
+    "opcode_markdown": "/static/opcode_markdown/66.mdx"
   },
   "67": {
     "name": "PUSH8",
@@ -573,7 +573,7 @@
     "input": "",
     "output": "value",
     "description": "Place 8 byte item on stack",
-    "markdown": "/static/markdown/67.mdx"
+    "opcode_markdown": "/static/opcode_markdown/67.mdx"
   },
   "68": {
     "name": "PUSH9",
@@ -581,7 +581,7 @@
     "input": "",
     "output": "value",
     "description": "Place 9 byte item on stack",
-    "markdown": "/static/markdown/68.mdx"
+    "opcode_markdown": "/static/opcode_markdown/68.mdx"
   },
   "69": {
     "name": "PUSH10",
@@ -589,7 +589,7 @@
     "input": "",
     "output": "value",
     "description": "Place 10 byte item on stack",
-    "markdown": "/static/markdown/69.mdx"
+    "opcode_markdown": "/static/opcode_markdown/69.mdx"
   },
   "6a": {
     "name": "PUSH11",
@@ -597,7 +597,7 @@
     "input": "",
     "output": "value",
     "description": "Place 11 byte item on stack",
-    "markdown": "/static/markdown/6A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/6A.mdx"
   },
   "6b": {
     "name": "PUSH12",
@@ -605,7 +605,7 @@
     "input": "",
     "output": "value",
     "description": "Place 12 byte item on stack",
-    "markdown": "/static/markdown/6B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/6B.mdx"
   },
   "6c": {
     "name": "PUSH13",
@@ -613,7 +613,7 @@
     "input": "",
     "output": "value",
     "description": "Place 13 byte item on stack",
-    "markdown": "/static/markdown/6C.mdx"
+    "opcode_markdown": "/static/opcode_markdown/6C.mdx"
   },
   "6d": {
     "name": "PUSH14",
@@ -621,7 +621,7 @@
     "input": "",
     "output": "value",
     "description": "Place 14 byte item on stack",
-    "markdown": "/static/markdown/6D.mdx"
+    "opcode_markdown": "/static/opcode_markdown/6D.mdx"
   },
   "6e": {
     "name": "PUSH15",
@@ -629,7 +629,7 @@
     "input": "",
     "output": "value",
     "description": "Place 15 byte item on stack",
-    "markdown": "/static/markdown/6E.mdx"
+    "opcode_markdown": "/static/opcode_markdown/6E.mdx"
   },
   "6f": {
     "name": "PUSH16",
@@ -637,7 +637,7 @@
     "input": "",
     "output": "value",
     "description": "Place 16 byte item on stack",
-    "markdown": "/static/markdown/6F.mdx"
+    "opcode_markdown": "/static/opcode_markdown/6F.mdx"
   },
   "70": {
     "name": "PUSH17",
@@ -645,7 +645,7 @@
     "input": "",
     "output": "value",
     "description": "Place 17 byte item on stack",
-    "markdown": "/static/markdown/70.mdx"
+    "opcode_markdown": "/static/opcode_markdown/70.mdx"
   },
   "71": {
     "name": "PUSH18",
@@ -653,7 +653,7 @@
     "input": "",
     "output": "value",
     "description": "Place 18 byte item on stack",
-    "markdown": "/static/markdown/71.mdx"
+    "opcode_markdown": "/static/opcode_markdown/71.mdx"
   },
   "72": {
     "name": "PUSH19",
@@ -661,7 +661,7 @@
     "input": "",
     "output": "value",
     "description": "Place 19 byte item on stack",
-    "markdown": "/static/markdown/72.mdx"
+    "opcode_markdown": "/static/opcode_markdown/72.mdx"
   },
   "73": {
     "name": "PUSH20",
@@ -669,7 +669,7 @@
     "input": "",
     "output": "value",
     "description": "Place 20 byte item on stack",
-    "markdown": "/static/markdown/73.mdx"
+    "opcode_markdown": "/static/opcode_markdown/73.mdx"
   },
   "74": {
     "name": "PUSH21",
@@ -677,7 +677,7 @@
     "input": "",
     "output": "value",
     "description": "Place 21 byte item on stack",
-    "markdown": "/static/markdown/74.mdx"
+    "opcode_markdown": "/static/opcode_markdown/74.mdx"
   },
   "75": {
     "name": "PUSH22",
@@ -685,7 +685,7 @@
     "input": "",
     "output": "value",
     "description": "Place 22 byte item on stack",
-    "markdown": "/static/markdown/75.mdx"
+    "opcode_markdown": "/static/opcode_markdown/75.mdx"
   },
   "76": {
     "name": "PUSH23",
@@ -693,7 +693,7 @@
     "input": "",
     "output": "value",
     "description": "Place 23 byte item on stack",
-    "markdown": "/static/markdown/76.mdx"
+    "opcode_markdown": "/static/opcode_markdown/76.mdx"
   },
   "77": {
     "name": "PUSH24",
@@ -701,7 +701,7 @@
     "input": "",
     "output": "value",
     "description": "Place 24 byte item on stack",
-    "markdown": "/static/markdown/77.mdx"
+    "opcode_markdown": "/static/opcode_markdown/77.mdx"
   },
   "78": {
     "name": "PUSH25",
@@ -709,7 +709,7 @@
     "input": "",
     "output": "value",
     "description": "Place 25 byte item on stack",
-    "markdown": "/static/markdown/78.mdx"
+    "opcode_markdown": "/static/opcode_markdown/78.mdx"
   },
   "79": {
     "name": "PUSH26",
@@ -717,7 +717,7 @@
     "input": "",
     "output": "value",
     "description": "Place 26 byte item on stack",
-    "markdown": "/static/markdown/79.mdx"
+    "opcode_markdown": "/static/opcode_markdown/79.mdx"
   },
   "7a": {
     "name": "PUSH27",
@@ -725,7 +725,7 @@
     "input": "",
     "output": "value",
     "description": "Place 27 byte item on stack",
-    "markdown": "/static/markdown/7A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/7A.mdx"
   },
   "7b": {
     "name": "PUSH28",
@@ -733,7 +733,7 @@
     "input": "",
     "output": "value",
     "description": "Place 28 byte item on stack",
-    "markdown": "/static/markdown/7B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/7B.mdx"
   },
   "7c": {
     "name": "PUSH29",
@@ -741,7 +741,7 @@
     "input": "",
     "output": "value",
     "description": "Place 29 byte item on stack",
-    "markdown": "/static/markdown/7C.mdx"
+    "opcode_markdown": "/static/opcode_markdown/7C.mdx"
   },
   "7d": {
     "name": "PUSH30",
@@ -749,7 +749,7 @@
     "input": "",
     "output": "value",
     "description": "Place 30 byte item on stack",
-    "markdown": "/static/markdown/7D.mdx"
+    "opcode_markdown": "/static/opcode_markdown/7D.mdx"
   },
   "7e": {
     "name": "PUSH31",
@@ -757,7 +757,7 @@
     "input": "",
     "output": "value",
     "description": "Place 31 byte item on stack",
-    "markdown": "/static/markdown/7E.mdx"
+    "opcode_markdown": "/static/opcode_markdown/7E.mdx"
   },
   "7f": {
     "name": "PUSH32",
@@ -765,7 +765,7 @@
     "input": "",
     "output": "value",
     "description": "Place 32 byte (full word) item on stack",
-    "markdown": "/static/markdown/7F.mdx"
+    "opcode_markdown": "/static/opcode_markdown/7F.mdx"
   },
   "80": {
     "name": "DUP1",
@@ -773,7 +773,7 @@
     "input": "value",
     "output": "value | value",
     "description": "Duplicate 1st stack item",
-    "markdown": "/static/markdown/80.mdx"
+    "opcode_markdown": "/static/opcode_markdown/80.mdx"
   },
   "81": {
     "name": "DUP2",
@@ -781,7 +781,7 @@
     "input": "a | b",
     "output": "b | a | b",
     "description": "Duplicate 2nd stack item",
-    "markdown": "/static/markdown/81.mdx"
+    "opcode_markdown": "/static/opcode_markdown/81.mdx"
   },
   "82": {
     "name": "DUP3",
@@ -789,7 +789,7 @@
     "input": "a | b | c",
     "output": "c | a | b | c",
     "description": "Duplicate 3rd stack item",
-    "markdown": "/static/markdown/82.mdx"
+    "opcode_markdown": "/static/opcode_markdown/82.mdx"
   },
   "83": {
     "name": "DUP4",
@@ -797,7 +797,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 4th stack item",
-    "markdown": "/static/markdown/83.mdx"
+    "opcode_markdown": "/static/opcode_markdown/83.mdx"
   },
   "84": {
     "name": "DUP5",
@@ -805,7 +805,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 5th stack item",
-    "markdown": "/static/markdown/84.mdx"
+    "opcode_markdown": "/static/opcode_markdown/84.mdx"
   },
   "85": {
     "name": "DUP6",
@@ -813,7 +813,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 6th stack item",
-    "markdown": "/static/markdown/85.mdx"
+    "opcode_markdown": "/static/opcode_markdown/85.mdx"
   },
   "86": {
     "name": "DUP7",
@@ -821,7 +821,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 7th stack item",
-    "markdown": "/static/markdown/86.mdx"
+    "opcode_markdown": "/static/opcode_markdown/86.mdx"
   },
   "87": {
     "name": "DUP8",
@@ -829,7 +829,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 8th stack item",
-    "markdown": "/static/markdown/87.mdx"
+    "opcode_markdown": "/static/opcode_markdown/87.mdx"
   },
   "88": {
     "name": "DUP9",
@@ -837,7 +837,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 9th stack item",
-    "markdown": "/static/markdown/88.mdx"
+    "opcode_markdown": "/static/opcode_markdown/88.mdx"
   },
   "89": {
     "name": "DUP10",
@@ -845,7 +845,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 10th stack item",
-    "markdown": "/static/markdown/89.mdx"
+    "opcode_markdown": "/static/opcode_markdown/89.mdx"
   },
   "8a": {
     "name": "DUP11",
@@ -853,7 +853,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 11th stack item",
-    "markdown": "/static/markdown/8A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/8A.mdx"
   },
   "8b": {
     "name": "DUP12",
@@ -861,7 +861,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 12th stack item",
-    "markdown": "/static/markdown/8B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/8B.mdx"
   },
   "8c": {
     "name": "DUP13",
@@ -869,7 +869,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 13th stack item",
-    "markdown": "/static/markdown/8C.mdx"
+    "opcode_markdown": "/static/opcode_markdown/8C.mdx"
   },
   "8d": {
     "name": "DUP14",
@@ -877,7 +877,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 14th stack item",
-    "markdown": "/static/markdown/8D.mdx"
+    "opcode_markdown": "/static/opcode_markdown/8D.mdx"
   },
   "8e": {
     "name": "DUP15",
@@ -885,7 +885,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 15th stack item",
-    "markdown": "/static/markdown/8E.mdx"
+    "opcode_markdown": "/static/opcode_markdown/8E.mdx"
   },
   "8f": {
     "name": "DUP16",
@@ -893,7 +893,7 @@
     "input": "... | value",
     "output": "value | ... | value",
     "description": "Duplicate 16th stack item",
-    "markdown": "/static/markdown/8F.mdx"
+    "opcode_markdown": "/static/opcode_markdown/8F.mdx"
   },
   "90": {
     "name": "SWAP1",
@@ -901,7 +901,7 @@
     "input": "a | b",
     "output": "b | a",
     "description": "Exchange 1st and 2nd stack items",
-    "markdown": "/static/markdown/90.mdx"
+    "opcode_markdown": "/static/opcode_markdown/90.mdx"
   },
   "91": {
     "name": "SWAP2",
@@ -909,7 +909,7 @@
     "input": "a | b | c",
     "output": "c | b | a",
     "description": "Exchange 1st and 3rd stack items",
-    "markdown": "/static/markdown/91.mdx"
+    "opcode_markdown": "/static/opcode_markdown/91.mdx"
   },
   "92": {
     "name": "SWAP3",
@@ -917,7 +917,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 4th stack items",
-    "markdown": "/static/markdown/92.mdx"
+    "opcode_markdown": "/static/opcode_markdown/92.mdx"
   },
   "93": {
     "name": "SWAP4",
@@ -925,7 +925,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 5th stack items",
-    "markdown": "/static/markdown/93.mdx"
+    "opcode_markdown": "/static/opcode_markdown/93.mdx"
   },
   "94": {
     "name": "SWAP5",
@@ -933,7 +933,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 6th stack items",
-    "markdown": "/static/markdown/94.mdx"
+    "opcode_markdown": "/static/opcode_markdown/94.mdx"
   },
   "95": {
     "name": "SWAP6",
@@ -941,7 +941,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 7th stack items",
-    "markdown": "/static/markdown/95.mdx"
+    "opcode_markdown": "/static/opcode_markdown/95.mdx"
   },
   "96": {
     "name": "SWAP7",
@@ -949,7 +949,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 8th stack items",
-    "markdown": "/static/markdown/96.mdx"
+    "opcode_markdown": "/static/opcode_markdown/96.mdx"
   },
   "97": {
     "name": "SWAP8",
@@ -957,7 +957,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 9th stack items",
-    "markdown": "/static/markdown/97.mdx"
+    "opcode_markdown": "/static/opcode_markdown/97.mdx"
   },
   "98": {
     "name": "SWAP9",
@@ -965,7 +965,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 10th stack items",
-    "markdown": "/static/markdown/98.mdx"
+    "opcode_markdown": "/static/opcode_markdown/98.mdx"
   },
   "99": {
     "name": "SWAP10",
@@ -973,7 +973,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 11th stack items",
-    "markdown": "/static/markdown/99.mdx"
+    "opcode_markdown": "/static/opcode_markdown/99.mdx"
   },
   "9a": {
     "name": "SWAP11",
@@ -981,7 +981,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 12th stack items",
-    "markdown": "/static/markdown/9A.mdx"
+    "opcode_markdown": "/static/opcode_markdown/9A.mdx"
   },
   "9b": {
     "name": "SWAP12",
@@ -989,7 +989,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 13th stack items",
-    "markdown": "/static/markdown/9B.mdx"
+    "opcode_markdown": "/static/opcode_markdown/9B.mdx"
   },
   "9c": {
     "name": "SWAP13",
@@ -997,7 +997,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 14th stack items",
-    "markdown": "/static/markdown/9C.mdx"
+    "opcode_markdown": "/static/opcode_markdown/9C.mdx"
   },
   "9d": {
     "name": "SWAP14",
@@ -1005,7 +1005,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 15th stack items",
-    "markdown": "/static/markdown/9D.mdx"
+    "opcode_markdown": "/static/opcode_markdown/9D.mdx"
   },
   "9e": {
     "name": "SWAP15",
@@ -1013,7 +1013,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 16th stack items",
-    "markdown": "/static/markdown/9E.mdx"
+    "opcode_markdown": "/static/opcode_markdown/9E.mdx"
   },
   "9f": {
     "name": "SWAP16",
@@ -1021,7 +1021,7 @@
     "input": "a | ... | b",
     "output": "b | ... | a",
     "description": "Exchange 1st and 17th stack items",
-    "markdown": "/static/markdown/9F.mdx"
+    "opcode_markdown": "/static/opcode_markdown/9F.mdx"
   },
   "a0": {
     "name": "LOG0",
@@ -1029,7 +1029,7 @@
     "input": "offset | size",
     "output": "",
     "description": "Append log record with no topics",
-    "markdown": "/static/markdown/A0.mdx"
+    "opcode_markdown": "/static/opcode_markdown/A0.mdx"
   },
   "a1": {
     "name": "LOG1",
@@ -1037,7 +1037,7 @@
     "input": "offset | size | topic",
     "output": "",
     "description": "Append log record with one topic",
-    "markdown": "/static/markdown/A1.mdx"
+    "opcode_markdown": "/static/opcode_markdown/A1.mdx"
   },
   "a2": {
     "name": "LOG2",
@@ -1045,7 +1045,7 @@
     "input": "offset | size | topic1 | topic2",
     "output": "",
     "description": "Append log record with two topics",
-    "markdown": "/static/markdown/A2.mdx"
+    "opcode_markdown": "/static/opcode_markdown/A2.mdx"
   },
   "a3": {
     "name": "LOG3",
@@ -1053,7 +1053,7 @@
     "input": "offset | size | topic1 | topic2 | topic3",
     "output": "",
     "description": "Append log record with three topics",
-    "markdown": "/static/markdown/A3.mdx"
+    "opcode_markdown": "/static/opcode_markdown/A3.mdx"
   },
   "a4": {
     "name": "LOG4",
@@ -1061,7 +1061,7 @@
     "input": "offset | size | topic1 | topic2 | topic3 | topic4",
     "output": "",
     "description": "Append log record with four topics",
-    "markdown": "/static/markdown/A4.mdx"
+    "opcode_markdown": "/static/opcode_markdown/A4.mdx"
   },
   "f0": {
     "name": "CREATE",
@@ -1069,7 +1069,7 @@
     "input": "value | offset | size",
     "output": "address",
     "description": "Create a new account with associated code",
-    "markdown": "/static/markdown/F0.mdx"
+    "opcode_markdown": "/static/opcode_markdown/F0.mdx"
   },
   "f1": {
     "name": "CALL",
@@ -1077,7 +1077,7 @@
     "input": "gas | address | value | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
     "description": "Message-call into an account",
-    "markdown": "/static/markdown/F1.mdx"
+    "opcode_markdown": "/static/opcode_markdown/F1.mdx"
   },
   "f2": {
     "name": "CALLCODE",
@@ -1085,7 +1085,7 @@
     "input": "gas | address | value | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
     "description": "Message-call into this account with alternative account’s code",
-    "markdown": "/static/markdown/F2.mdx"
+    "opcode_markdown": "/static/opcode_markdown/F2.mdx"
   },
   "f3": {
     "name": "RETURN",
@@ -1093,7 +1093,7 @@
     "input": "offset | size",
     "output": "",
     "description": "Halt execution returning output data",
-    "markdown": "/static/markdown/F3.mdx"
+    "opcode_markdown": "/static/opcode_markdown/F3.mdx"
   },
   "f4": {
     "name": "DELEGATECALL",
@@ -1101,7 +1101,7 @@
     "input": "gas | address | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
     "description": "Message-call into this account with an alternative account’s code, but persisting the current values for sender and value",
-    "markdown": "/static/markdown/F4.mdx"
+    "opcode_markdown": "/static/opcode_markdown/F4.mdx"
   },
   "f5": {
     "name": "CREATE2",
@@ -1109,7 +1109,7 @@
     "input": "value | offset | size | salt",
     "output": "address",
     "description": "Create a new account with associated code at a predictable address",
-    "markdown": "/static/markdown/F5.mdx"
+    "opcode_markdown": "/static/opcode_markdown/F5.mdx"
   },
   "fa": {
     "name": "STATICCALL",
@@ -1117,7 +1117,7 @@
     "input": "gas | address | argsOffset | argsSize | retOffset | retSize",
     "output": "success",
     "description": "Static message-call into an account",
-    "markdown": "/static/markdown/FA.mdx"
+    "opcode_markdown": "/static/opcode_markdown/FA.mdx"
   },
   "fd": {
     "name": "REVERT",
@@ -1125,7 +1125,7 @@
     "input": "offset | size",
     "output": "",
     "description": "Halt execution reverting state changes but returning data and remaining gas",
-    "markdown": "/static/markdown/FD.mdx"
+    "opcode_markdown": "/static/opcode_markdown/FD.mdx"
   },
   "fe": {
     "name": "INVALID",
@@ -1133,7 +1133,7 @@
     "input": "",
     "output": "",
     "description": "Designated invalid instruction",
-    "markdown": "/static/markdown/FE.mdx"
+    "opcode_markdown": "/static/opcode_markdown/FE.mdx"
   },
   "ff": {
     "name": "SELFDESTRUCT",
@@ -1141,6 +1141,6 @@
     "input": "address",
     "output": "",
     "description": "Halt execution and register account for later deletion",
-    "markdown": "/static/markdown/FF.mdx"
+    "opcode_markdown": "/static/opcode_markdown/FF.mdx"
   }
 }

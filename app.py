@@ -8,8 +8,8 @@ import subprocess
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your-secret-key"
 
-MYTHRIL_PATH = "/home/ppakjae/Downloads/mythril-0.23.17/myth"
-# MYTHRIL_PATH = "/home/infosec/Desktop/mythril-develop/myth"
+# MYTHRIL_PATH = "/home/ppakjae/Downloads/mythril-0.23.17/myth"
+MYTHRIL_PATH = "/home/infosec/Desktop/mythril-develop/myth"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -44,12 +44,7 @@ def index():
             # 모드 변경은 여기서 하면 될듯 
             # switch 문을 통해 disassemble, analyze 가능할듯
             if mode == "analyze":
-                mythril_output = subprocess.check_output(
-                    [MYTHRIL_PATH, "analyze", file_path],
-                    stderr=subprocess.PIPE,
-                ).decode("utf-8")
-            elif mode == "disassemble":
-                mythril_output = subprocess.check_output(
+                mythril_output = subprocess.check_output(render_template
                     [MYTHRIL_PATH, "disassemble", file_path],
                     stderr=subprocess.PIPE,
                 ).decode("utf-8")
@@ -75,6 +70,12 @@ def opcodes():
     with open("opcodes.json", 'r') as f:
         data = json.load(f)
     return render_template("opcodes.html", table_data=data)
+
+@app.route("/swc", methods=["GET", "POST"])
+def swc():
+    with open("swc_simple.json", 'r') as f:
+        data = json.load(f)
+    return render_template("swc.html", swc_data = data)
 
 if __name__ == "__main__":
     app.run(debug=True)

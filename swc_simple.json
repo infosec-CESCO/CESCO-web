@@ -1,0 +1,103 @@
+{
+    "SWC-100": {
+        "Title": "Function Default Visibility",
+        "Description": "Functions that do not have a function visibility type",
+        "Remediation": "Functions can be specified as being `external`, `public`, `internal` or `private`."
+    },
+    "SWC-101": {
+        "Title": "Integer Overflow and Underflow",
+        "Description": "An arithmetic operation reaches the maximum or minimum size of a type.",
+        "Remediation": "To use vetted safe math libraries for arithmetic operations consistently."
+      
+    },
+    "SWC-102": {
+        "Title": "Outdated Compiler Version",
+        "Description": "Using a compiler that is outdated may be vulnerable to security",
+        "Remediation": "To use a recent version of the Solidity compiler."
+    },
+    "SWC-103": {
+        "Title": "Floating Pragma",
+        "Description": "Contracts should be deployed with the same compiler version and flags that they have been tested with thoroughly.",
+        "Remediation": "Lock the pragma version."
+    },
+    "SWC-104": {
+        "Title": "Unchecked Call Return Value",
+        "Description": "The return value of a message call is not checked.",
+        "Remediation": "If you choose to use low-level call methods, make sure to handle the possibility that the call will fail by checking the return value."
+    },
+    "SWC-105": {
+        "Title": "Unprotected Ether Withdrawal",
+        "Description": "Any sender can withdraw ETH from the contract account.",
+        "Remediation": "Implement controls so withdrawals can only be triggered by authorized parties or according to the specs of the smart contract system."
+    },
+    "SWC-106": {
+        "Title": "Unprotected SELFDESTRUCT Instruction",
+        "Description": "Contract can be accidentally killed by anyone.",
+        "Remediation": "To implement a multisig scheme so that multiple parties must approve the self-destruct action."
+    },
+    "SWC-107": {
+        "Title": "Reentrancy",
+        "Description": "A malicious contract calls back into the calling contract before the first invocation of the function is finished.",
+        "Remediation": "Make sure code safely and use a lock."
+    },
+    "SWC-110": {
+        "Title": "Assert Violation",
+        "Description": "The Solidity `assert()` function is meant to assert invariants.",
+        "Remediation": "Consider whether the condition checked in the `assert()` is actually an invariant. If not, replace the `assert()` statement with a `require()` statement."
+    },
+    "SWC-111": {
+        "Title": "Use of Deprecated Solidity Functions",
+        "Description": "Use of missing functions.",
+        "Remediation": "Solidity provides alternatives to the deprecated constructions."
+    },
+    "SWC-112": {
+        "Title": "Delegatecall to Untrusted Callee",
+        "Description": "Check for invocations of delegatecall to a user-supplied address.",
+        "Remediation": "Use `delegatecall` with caution and make sure to never call into untrusted contracts."
+    },
+    "SWC-113": {
+        "Title": "DoS with Failed Call",
+        "Description": "Check for multiple sends in a single transaction.",
+        "Remediation": "Implement the contract logic to handle failed calls."
+    },
+    "SWC-114": {
+        "Title": "Transaction Order Dependence",
+        "Description": "Extorting benefits by creating a transaction that performs the same behavior as an existing transaction",
+        "Remediation": "To usecommit reveal hash scheme."
+    },
+    "SWC-115": {
+        "Title": "Authorization through tx.origin",
+        "Description": "Using 'tx.origin' for authorization could make a contract vulnerable.",
+        "Remediation": "`tx.origin` should not be used for authorization. Use `msg.sender` instead."
+    },
+    "SWC-116": {
+        "Title": "Block values as a proxy for time",
+        "Description": "Control flow depends on a predictable environment variable",
+        "Remediation": "Developers should write smart contracts with the notion that block values are not precise, and the use of them can lead to unexpected effects. Alternatively, they may make use oracles."
+    },
+    "SWC-118": {
+        "Title": "Incorrect Constructor Name",
+        "Description": "Do not match function name and constructor name",
+        "Remediation": "To use keyword 'constructor'."
+    },
+    "SWC-120": {
+        "Title": "Weak Sources of Randomness from Chain Attributes",
+        "Description": "Control flow depends on a predictable environment variable",
+        "Remediation": "Using external sources of randomness via oracles."
+    },
+    "SWC-123": {
+        "Title": "Requirement Violation",
+        "Description": "The Solidity `require()` construct is meant to validate external inputs of a function.",
+        "Remediation": "The bug must be in the contract that provided the external input and one should consider fixing its code by making sure no invalid inputs are provided."
+    },
+    "SWC-124": {
+        "Title": "Write to Arbitrary Storage Location",
+        "Description": "A smart contract's data (e.g., storing the owner of the contract) is persistently stored\nat some storage location (i.e., a key or address) on the EVM level.",
+        "Remediation": "As a general advice, given that all data structures share the same storage (address)\nspace, one should make sure that writes to one data structure cannot inadvertently\noverwrite entries of another data structure."
+    },
+    "SWC-127": {
+        "Title": "Arbitrary Jump with Function Type Variable",
+        "Description": "If the developer uses assembly instructions, such as `mstore` or assign operator, is able to point a function type variable to any code instruction, violating required validations and required state changes.",
+        "Remediation": "The use of assembly should be minimal. A developer should not allow a user to assign arbitrary values to function type variables."
+    }
+  }

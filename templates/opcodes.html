@@ -48,7 +48,7 @@
                 </thead>
                 <tbody>
                 {% for row_data in table_data %}
-                    <tr onclick="toggleRow(this, '{{ table_data[row_data]['markdown'] }}')" class="opcode">
+                    <tr onclick="toggleRow(this, '{{ table_data[row_data]['opcode_markdown'] }}')" class="opcode">
                         <td>
                             <div style="flex-wrap: nowrap" class="content">
                                 {{ row_data.upper() }}

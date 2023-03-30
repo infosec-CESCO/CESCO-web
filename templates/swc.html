@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block static %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='opcodes.css') }}">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sidebars.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='sidebars.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+{% endblock %}
+
+{% block js %}
+    
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class = "title" style = "margin: auto; width: 1400px; border-bottom: 1px solid;" >
+            Smart Contract Vulnerabilities<br>
+            <p style = "margin-top: 15px; margin-bottom: 15px; font-size: 17px; font-weight: 400;">In this guide, we'll be exploring the various types of vulnerabilities that can exist in smart contracts, as well as their potential impact and how to mitigate them. <br>Whether you're a developer, investor, or just interested in learning more about smart contracts, this guide will provide you with valuable insights into this rapidly evolving field.</p>
+        </div>
+        <br>
+        
+
+        <section style ="display: flex;">
+
+            <div class="flex-shrink-0 p-3 bg-white" style="width: 240px;">
+                <div style = "text-align: center; border-bottom: 1px solid black; width: 200px;" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
+                  <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                  <span class="fs-5 fw-semibold">Detection<br>Modules</span>
+                </div>
+                <ul class="list-unstyled ps-0">
+                  <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                      default
+                    </button>
+                    <div class="collapse show" id="home-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-101</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-104</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-105</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-106</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-110</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-112</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-113</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-115</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-116</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-124</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-127</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                      developed
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-100</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-102</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-103</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-107</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-111</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-114</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-120</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">SWC-123</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  
+                </ul>
+            </div>
+
+            <div>
+                <table style = "margin-top: 40px;">
+                    <thead>
+                        <tr>
+                            <th style = "width: 10%;">
+                                SWC-ID
+                            </th>
+                            <th style = "width: 20%;">
+                                Title
+                            </th>
+                            <th style = "width: 35%;">
+                                Description
+                            </th>
+                            <th style = "width: 35%;">
+                                Remediation
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row_data in swc_data%}
+                        <tr style = "border-bottom: 1px solid lightgray;">
+                            <td>
+                                {{ row_data.upper() }}
+                            </td>
+                            <td>
+                                {{ swc_data[row_data]["Title"]}}
+                            </td>
+                            <td>
+                                {{ swc_data[row_data]["Description"]}}
+                            </td>
+                            <td>
+                                {{ swc_data[row_data]["Remediation"]}}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+{% endblock %}
