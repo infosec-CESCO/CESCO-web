@@ -43,7 +43,18 @@
         {% if mythril_output %}
             <div class="mythril-output mt-4">
                 <h2>Mythril Analysis Results:</h2>
-                <pre>{{ mythril_output }}</pre>
+                {% for issue in mythril_json["issues"] %}
+                    <li>
+                        <strong>Title:</strong> {{ issue["title"] }}<br>
+                        <strong>SWC-ID:</strong> {{ issue["swc-id"] }}<br>
+                        <strong>Description:</strong> {{ issue["description"] }}<br>
+                        <strong>Severity:</strong> {{ issue["severity"] }}<br>
+                        <strong>Line number:</strong> {{ issue["lineno"] }}<br>
+                        <strong>Contract:</strong> {{ issue["contract"] }}<br>
+                        <strong>Function:</strong> {{ issue["function"] }}<br>
+                        <strong>Code:</strong> {{ issue["code"] }}<br>
+                    </li>
+                {% endfor %}
             </div>
 
         {% endif %}

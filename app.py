@@ -45,7 +45,7 @@ def index():
             # switch 문을 통해 disassemble, analyze 가능할듯
             if mode == "analyze":
                 mythril_output = subprocess.check_output(render_template
-                    [MYTHRIL_PATH, "disassemble", file_path],
+                    [MYTHRIL_PATH, "disassemble", file_path, "-o", "json"],
                     stderr=subprocess.PIPE,
                 ).decode("utf-8")
 
