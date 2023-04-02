@@ -4,6 +4,7 @@ import tempfile
 from flask import Flask, render_template, request, flash
 from werkzeug.utils import secure_filename
 import subprocess
+import markdown2
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your-secret-key"
@@ -75,7 +76,16 @@ def opcodes():
 def swc():
     with open("swc_simple.json", 'r') as f:
         data = json.load(f)
-    return render_template("swc.html", swc_data = data)
+    return render_template("swc.html", swc_data=data)
+
+@app.route("/swc/<swc_id>", methods=["GET"])
+def swc_id_description(swc_id):
+    with open("swc.json", 'r') as f:
+        data = json.load(f)
+
+    markdown_content = data[swc_id]["markdown"]
+    html_content = markdown2.markdown(markdown_content)
+    return render_template("swc_description.html", swc_description=html_content)
 
 if __name__ == "__main__":
     app.run(debug=True)
