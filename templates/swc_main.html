@@ -1,0 +1,44 @@
+{% extends "swc_base.html" %}
+
+{% block swc_content %}
+
+            <div>
+                <table style = "margin-top: 40px;">
+                    <thead>
+                        <tr>
+                            <th style = "width: 10%;">
+                                SWC-ID
+                            </th>
+                            <th style = "width: 20%;">
+                                Title
+                            </th>
+                            <th style = "width: 35%;">
+                                Description
+                            </th>
+                            <th style = "width: 35%;">
+                                Remediation
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row_data in swc_data%}
+                        <tr style = "border-bottom: 1px solid lightgray;">
+                            <td>
+                                {{ row_data.upper() }}
+                            </td>
+                            <td>
+                                {{ swc_data[row_data]["Title"]}}
+                            </td>
+                            <td>
+                                {{ swc_data[row_data]["Description"]}}
+                            </td>
+                            <td>
+                                {{ swc_data[row_data]["Remediation"]}}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+{% endblock %}

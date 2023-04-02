@@ -76,7 +76,7 @@ def opcodes():
 def swc():
     with open("swc_simple.json", 'r') as f:
         data = json.load(f)
-    return render_template("swc.html", swc_data=data)
+    return render_template("swc_main.html", swc_data=data)
 
 @app.route("/swc/<swc_id>", methods=["GET"])
 def swc_id_description(swc_id):
@@ -88,4 +88,4 @@ def swc_id_description(swc_id):
     return render_template("swc_description.html", swc_description=html_content)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
