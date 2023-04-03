@@ -24,7 +24,7 @@
                         {% for row_data in swc_data%}
                         <tr style = "border-bottom: 1px solid lightgray;">
                             <td>
-                                {{ row_data.upper() }}
+                                <a href="/swc/{{ row_data.upper() }}">{{ row_data.upper() }}</a>
                             </td>
                             <td>
                                 {{ swc_data[row_data]["Title"]}}
