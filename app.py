@@ -83,8 +83,11 @@ def swc_id_description(swc_id):
     with open("swc.json", 'r') as f:
         data = json.load(f)
 
-    markdown_content = data[swc_id]["markdown"]
-    html_content = markdown2.markdown(markdown_content)
+    md_content = data[swc_id]["markdown"]
+    md_parser = markdown2.Markdown(extras=['tables'])
+    html_content = md_parser.convert(md_content)
+    html_content = html_content.replace('<table>', '<table class="table">')
+
     return render_template("swc_description.html", swc_description=html_content)
 
 if __name__ == "__main__":
