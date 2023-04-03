@@ -34,13 +34,8 @@
             </header>
         </div>
 
-        {% block js %}
-        {% endblock %}
-
         {% block content %}
         {% endblock %}
-
-
 
         <div class="container">
             <footer class="py-3 my-4">
@@ -54,5 +49,9 @@
                 <p class="text-center text-muted">&copy; 2023 CESCO</p>
             </footer>
         </div>
+
+        {% block js %}
+        {% endblock %}
+
     </body>
 </html>

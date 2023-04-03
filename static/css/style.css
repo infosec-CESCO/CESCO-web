@@ -1,7 +1,11 @@
-#spinner {
+/* #spinner {
     display: block;
 }
 
 #spinner.show {
     display: block;
+} */
+
+.spinner-border {
+    display: none;
 }

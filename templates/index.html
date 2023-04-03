@@ -60,32 +60,12 @@
         {% endif %}
     </div>
 
-    <!-- <script>
-      const form = document.querySelector('#myForm');
-      const spinner = document.querySelector('#spinner');
+{% endblock %}
 
-      form.addEventListener('submit', (event) => {
-          event.preventDefault(); // prevent the form from submitting
-
-          spinner.classList.add('show'); // show the spinner
-
-          // send the post request to the server
-          fetch('/path/to/flask', {
-              method: 'POST',
-              body: new FormData(form)
-          })
-          .then(response => response.json())
-          .then(data => {
-              // do something with the response data
-              spinner.classList.remove('show'); // hide the spinner
-          })
-          .catch(error => {
-              console.error(error);
-              spinner.classList.remove('show'); // hide the spinner
-          });
-      });
-  </script> -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script> -->
-
+{% block js %}
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function() {
+            document.getElementById("spinner").style.display = "block";
+        });
+    </script>
 {% endblock %}

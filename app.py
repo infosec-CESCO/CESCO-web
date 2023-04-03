@@ -12,6 +12,7 @@ app.config["SECRET_KEY"] = "your-secret-key"
 # MYTHRIL_PATH = "/home/ppakjae/Downloads/mythril-0.23.17/myth"
 MYTHRIL_PATH = "/home/infosec/Desktop/mythril-develop/myth"
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
@@ -45,7 +46,12 @@ def index():
             # 모드 변경은 여기서 하면 될듯 
             # switch 문을 통해 disassemble, analyze 가능할듯
             if mode == "analyze":
-                mythril_output = subprocess.check_output(render_template
+                mythril_output = subprocess.check_output(
+                    [MYTHRIL_PATH, "analyze", file_path, "-o", "json"],
+                    stderr=subprocess.PIPE,
+                ).decode("utf-8")
+            elif mode == "disassemble":
+                mythril_output = subprocess.check_output(
                     [MYTHRIL_PATH, "disassemble", file_path, "-o", "json"],
                     stderr=subprocess.PIPE,
                 ).decode("utf-8")
@@ -89,6 +95,7 @@ def swc_id_description(swc_id):
     html_content = html_content.replace('<table>', '<table class="table">')
 
     return render_template("swc_description.html", swc_description=html_content)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
