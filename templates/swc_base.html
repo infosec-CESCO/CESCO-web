@@ -26,11 +26,11 @@
                 </div>
                 <ul class="list-unstyled ps-0">
                   <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
                       default
                     </button>
-                    <div class="collapse show" id="home-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <div class="collapse" id="home-collapse">
+                      <ul id="default-list" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="/swc/SWC-101" class="link-dark d-inline-flex text-decoration-none rounded">SWC-101</a></li>
                         <li><a href="/swc/SWC-104" class="link-dark d-inline-flex text-decoration-none rounded">SWC-104</a></li>
                         <li><a href="/swc/SWC-105" class="link-dark d-inline-flex text-decoration-none rounded">SWC-105</a></li>
@@ -50,7 +50,7 @@
                       developed
                     </button>
                     <div class="collapse" id="dashboard-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <ul id="developed-list" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="/swc/SWC-100" class="link-dark d-inline-flex text-decoration-none rounded">SWC-100</a></li>
                         <li><a href="/swc/SWC-102" class="link-dark d-inline-flex text-decoration-none rounded">SWC-102</a></li>
                         <li><a href="/swc/SWC-103" class="link-dark d-inline-flex text-decoration-none rounded">SWC-103</a></li>
@@ -70,5 +70,24 @@
             {% endblock %}
 
         </section>
+
+        {% block js %}
+        <script>
+            const pathArray = window.location.pathname.split('/');
+            const swcCode = pathArray[pathArray.length - 1];
+
+            const defaultList = ["SWC-101", "SWC-104", "SWC-105", "SWC-106", "SWC-110", "SWC-112", "SWC-113", "SWC-115", "SWC-116", "SWC-124", "SWC-127"];
+            const developedList = ["SWC-100", "SWC-102", "SWC-103", "SWC-107", "SWC-111", "SWC-114", "SWC-120", "SWC-123"];
+
+            const defaultCollapse = document.getElementById('home-collapse');
+            const developedCollapse = document.getElementById('dashboard-collapse');
+
+            if (defaultList.includes(swcCode)) {
+              defaultCollapse.classList.add('show');
+            } else if (developedList.includes(swcCode)) {
+              developedCollapse.classList.add('show');
+            }
+        </script>
+        {% endblock %}
     </div>
 {% endblock %}
