@@ -5,7 +5,7 @@ function toggleRow(row, filename) {
     fetch(filename)
         .then(response => response.text())
         .then(md => {
-            const mdParser = new markdownit();
+            const mdParser = new markdownit({ html: true });
             const html = mdParser.render(md);
 
             const formattedHtml = `<div class="markdown-body">${html}</div>`;
