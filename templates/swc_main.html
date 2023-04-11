@@ -2,7 +2,7 @@
 
 {% block swc_content %}
 
-            <div>
+            <div style="width: 88%;">
                 <table style = "margin-top: 40px;">
                     <thead>
                         <tr>
@@ -14,9 +14,6 @@
                             </th>
                             <th style = "width: 35%;">
                                 Description
-                            </th>
-                            <th style = "width: 35%;">
-                                Remediation
                             </th>
                         </tr>
                     </thead>
@@ -31,9 +28,6 @@
                             </td>
                             <td>
                                 {{ swc_data[row_data]["Description"]}}
-                            </td>
-                            <td>
-                                {{ swc_data[row_data]["Remediation"]}}
                             </td>
                         </tr>
                         {% endfor %}
