@@ -81,3 +81,10 @@ table.table {
     max-width: 1000px;
     margin: 0;
 }
+
+th, td {
+    padding: 10px;
+}
+th{
+    font-size: 22px;
+}
