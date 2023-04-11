@@ -9,3 +9,24 @@
 .spinner-border {
     display: none;
 }
+
+#footcontainer {
+    margin-top: 250px !important; 
+}
+
+.mythril-output.mt-4 ~ #footcontainer {
+    margin-top: 0 !important; 
+}
+
+.result{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+    overflow-x: auto;
+}
