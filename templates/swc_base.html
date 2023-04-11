@@ -6,8 +6,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebars.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/swc.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/sidebars.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>       
+    
+    {% block swc_static %}
+    {% endblock %}
+
+    {% block swc_js %}
+    {% endblock %}
+
 {% endblock %}
+
+
 
 {% block content %}
     <div>
@@ -88,6 +97,7 @@
               developedCollapse.classList.add('show');
             }
         </script>
+      
         {% endblock %}
     </div>
 {% endblock %}
