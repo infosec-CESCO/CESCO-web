@@ -42,19 +42,24 @@ def index():
             flash("Please provide a Solidity file or enter the code.")
             return render_template("index.html")
 
+        use_solv = request.form.get("use_solv")
+        solv_version = request.form.get("solv_version")
+
+        use_t = request.form.get("use_t")
+        transaction_count = request.form.get("transaction_count")
+
+        mythril_command = [MYTHRIL_PATH, mode, file_path, "-o", "json"]
+
+        if use_solv == "on" and solv_version:
+            mythril_command.extend(["--solv", solv_version])
+
+        if use_t == "on" and transaction_count:
+            mythril_command.extend(["-t", transaction_count])
+
         try:
-            # 모드 변경은 여기서 하면 될듯 
-            # switch 문을 통해 disassemble, analyze 가능할듯
-            if mode == "analyze":
-                mythril_output = subprocess.check_output(
-                    [MYTHRIL_PATH, "analyze", file_path, "-o", "json"],
-                    stderr=subprocess.PIPE,
-                ).decode("utf-8")
-            elif mode == "disassemble":
-                mythril_output = subprocess.check_output(
-                    [MYTHRIL_PATH, "disassemble", file_path, "-o", "json"],
-                    stderr=subprocess.PIPE,
-                ).decode("utf-8")
+            mythril_output = subprocess.check_output(
+                mythril_command, stderr=subprocess.PIPE,
+            ).decode("utf-8")
 
         except subprocess.CalledProcessError as e:
             mythril_output = e.output.decode("utf-8")

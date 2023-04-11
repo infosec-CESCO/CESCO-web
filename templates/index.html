@@ -23,6 +23,18 @@
             </select>
 
             <div class="mb-3">
+                <input type="checkbox" name="use_solv" id="use_solv" onchange="toggleSolvInput()">
+                <label for="use_solv" class="form-label">Use specific Solidity compiler version:</label>
+                <input type="text" name="solv_version" class="form-control" id="solv_version" disabled placeholder="0.8.4">
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" name="use_t" id="use_t" onchange="toggleTxInput()">
+                <label for="use_solv" class="form-label">Use specific Transaction Count:</label>
+                <input type="text" name="transaction_count" class="form-control" id="transaction_count" disabled placeholder="2">
+            </div>
+
+            <div class="mb-3">
                 <label for="file" class="form-label">Upload a Solidity file:</label>
                 <input type="file" name="file" class="form-control" id="file">
             </div>
@@ -64,6 +76,18 @@
 
 {% block js %}
     <script>
+        function toggleSolvInput() {
+            const useSolv = document.getElementById("use_solv");
+            const solvVersion = document.getElementById("solv_version");
+            solvVersion.disabled = !useSolv.checked;
+        }
+
+        function toggleTxInput() {
+            const useT = document.getElementById("use_t");
+            const txCount = document.getElementById("transaction_count");
+            txCount.disabled = !useT.checked;
+        }
+
         document.getElementById("myForm").addEventListener("submit", function() {
             document.getElementById("spinner").style.display = "block";
         });
