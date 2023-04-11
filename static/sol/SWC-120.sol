@@ -1,4 +1,3 @@
-```solidity
 /*
  * @source: https://capturetheether.com/challenges/lotteries/guess-the-random-number/
  * @author: Steve Marx
@@ -26,4 +25,3 @@ contract GuessTheRandomNumberChallenge {
         }
     }
 }
-```

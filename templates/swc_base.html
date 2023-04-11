@@ -6,72 +6,96 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebars.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/swc.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/sidebars.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>       
-    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
     {% block swc_static %}
     {% endblock %}
-
-    {% block swc_js %}
-    {% endblock %}
-
 {% endblock %}
 
 
 
 {% block content %}
     <div>
-        <div class = "title" style = "margin: auto; width: 1400px; border-bottom: 1px solid;" >
+        <div class="title" style="margin: auto; width: 1400px; border-bottom: 1px solid;">
             Smart Contract Vulnerabilities<br>
-            <p style = "margin-top: 15px; margin-bottom: 15px; font-size: 17px; font-weight: 400;">In this guide, we'll be exploring the various types of vulnerabilities that can exist in smart contracts, as well as their potential impact and how to mitigate them. <br>Whether you're a developer, investor, or just interested in learning more about smart contracts, this guide will provide you with valuable insights into this rapidly evolving field.</p>
+            <p style="margin-top: 15px; margin-bottom: 15px; font-size: 17px; font-weight: 400;">In this guide, we'll be
+                exploring the various types of vulnerabilities that can exist in smart contracts, as well as their
+                potential impact and how to mitigate them. <br>Whether you're a developer, investor, or just interested
+                in learning more about smart contracts, this guide will provide you with valuable insights into this
+                rapidly evolving field.</p>
         </div>
         <br>
 
-        <section style ="display: flex;">
+        <section style="display: flex;">
 
             <div class="flex-shrink-0 p-3 bg-white" style="width: 240px;">
-                <div style = "text-align: center; border-bottom: 1px solid black; width: 200px;" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
-                  <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-                  <span class="fs-5 fw-semibold">Detection<br>Modules</span>
+                <div style="text-align: center; border-bottom: 1px solid black; width: 200px;"
+                     class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
+                    <svg class="bi pe-none me-2" width="30" height="24">
+                        <use xlink:href="#bootstrap"/>
+                    </svg>
+                    <span class="fs-5 fw-semibold">Detection<br>Modules</span>
                 </div>
                 <ul class="list-unstyled ps-0">
-                  <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                      default
-                    </button>
-                    <div class="collapse" id="home-collapse">
-                      <ul id="default-list" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/swc/SWC-101" class="link-dark d-inline-flex text-decoration-none rounded">SWC-101</a></li>
-                        <li><a href="/swc/SWC-104" class="link-dark d-inline-flex text-decoration-none rounded">SWC-104</a></li>
-                        <li><a href="/swc/SWC-105" class="link-dark d-inline-flex text-decoration-none rounded">SWC-105</a></li>
-                        <li><a href="/swc/SWC-106" class="link-dark d-inline-flex text-decoration-none rounded">SWC-106</a></li>
-                        <li><a href="/swc/SWC-110" class="link-dark d-inline-flex text-decoration-none rounded">SWC-110</a></li>
-                        <li><a href="/swc/SWC-112" class="link-dark d-inline-flex text-decoration-none rounded">SWC-112</a></li>
-                        <li><a href="/swc/SWC-113" class="link-dark d-inline-flex text-decoration-none rounded">SWC-113</a></li>
-                        <li><a href="/swc/SWC-115" class="link-dark d-inline-flex text-decoration-none rounded">SWC-115</a></li>
-                        <li><a href="/swc/SWC-116" class="link-dark d-inline-flex text-decoration-none rounded">SWC-116</a></li>
-                        <li><a href="/swc/SWC-124" class="link-dark d-inline-flex text-decoration-none rounded">SWC-124</a></li>
-                        <li><a href="/swc/SWC-127" class="link-dark d-inline-flex text-decoration-none rounded">SWC-127</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                      developed
-                    </button>
-                    <div class="collapse" id="dashboard-collapse">
-                      <ul id="developed-list" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/swc/SWC-100" class="link-dark d-inline-flex text-decoration-none rounded">SWC-100</a></li>
-                        <li><a href="/swc/SWC-102" class="link-dark d-inline-flex text-decoration-none rounded">SWC-102</a></li>
-                        <li><a href="/swc/SWC-103" class="link-dark d-inline-flex text-decoration-none rounded">SWC-103</a></li>
-                        <li><a href="/swc/SWC-107" class="link-dark d-inline-flex text-decoration-none rounded">SWC-107</a></li>
-                        <li><a href="/swc/SWC-111" class="link-dark d-inline-flex text-decoration-none rounded">SWC-111</a></li>
-                        <li><a href="/swc/SWC-114" class="link-dark d-inline-flex text-decoration-none rounded">SWC-114</a></li>
-                        <li><a href="/swc/SWC-120" class="link-dark d-inline-flex text-decoration-none rounded">SWC-120</a></li>
-                        <li><a href="/swc/SWC-123" class="link-dark d-inline-flex text-decoration-none rounded">SWC-123</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                            default
+                        </button>
+                        <div class="collapse" id="home-collapse">
+                            <ul id="default-list" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="/swc/SWC-101" class="link-dark d-inline-flex text-decoration-none rounded">SWC-101</a>
+                                </li>
+                                <li><a href="/swc/SWC-104" class="link-dark d-inline-flex text-decoration-none rounded">SWC-104</a>
+                                </li>
+                                <li><a href="/swc/SWC-105" class="link-dark d-inline-flex text-decoration-none rounded">SWC-105</a>
+                                </li>
+                                <li><a href="/swc/SWC-106" class="link-dark d-inline-flex text-decoration-none rounded">SWC-106</a>
+                                </li>
+                                <li><a href="/swc/SWC-110" class="link-dark d-inline-flex text-decoration-none rounded">SWC-110</a>
+                                </li>
+                                <li><a href="/swc/SWC-112" class="link-dark d-inline-flex text-decoration-none rounded">SWC-112</a>
+                                </li>
+                                <li><a href="/swc/SWC-113" class="link-dark d-inline-flex text-decoration-none rounded">SWC-113</a>
+                                </li>
+                                <li><a href="/swc/SWC-115" class="link-dark d-inline-flex text-decoration-none rounded">SWC-115</a>
+                                </li>
+                                <li><a href="/swc/SWC-116" class="link-dark d-inline-flex text-decoration-none rounded">SWC-116</a>
+                                </li>
+                                <li><a href="/swc/SWC-124" class="link-dark d-inline-flex text-decoration-none rounded">SWC-124</a>
+                                </li>
+                                <li><a href="/swc/SWC-127" class="link-dark d-inline-flex text-decoration-none rounded">SWC-127</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            developed
+                        </button>
+                        <div class="collapse" id="dashboard-collapse">
+                            <ul id="developed-list" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="/swc/SWC-100" class="link-dark d-inline-flex text-decoration-none rounded">SWC-100</a>
+                                </li>
+                                <li><a href="/swc/SWC-102" class="link-dark d-inline-flex text-decoration-none rounded">SWC-102</a>
+                                </li>
+                                <li><a href="/swc/SWC-103" class="link-dark d-inline-flex text-decoration-none rounded">SWC-103</a>
+                                </li>
+                                <li><a href="/swc/SWC-107" class="link-dark d-inline-flex text-decoration-none rounded">SWC-107</a>
+                                </li>
+                                <li><a href="/swc/SWC-111" class="link-dark d-inline-flex text-decoration-none rounded">SWC-111</a>
+                                </li>
+                                <li><a href="/swc/SWC-114" class="link-dark d-inline-flex text-decoration-none rounded">SWC-114</a>
+                                </li>
+                                <li><a href="/swc/SWC-120" class="link-dark d-inline-flex text-decoration-none rounded">SWC-120</a>
+                                </li>
+                                <li><a href="/swc/SWC-123" class="link-dark d-inline-flex text-decoration-none rounded">SWC-123</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
 
@@ -81,23 +105,26 @@
         </section>
 
         {% block js %}
-        <script>
-            const pathArray = window.location.pathname.split('/');
-            const swcCode = pathArray[pathArray.length - 1];
+            <script>
+                const pathArray = window.location.pathname.split('/');
+                const swcCode = pathArray[pathArray.length - 1];
 
-            const defaultList = ["SWC-101", "SWC-104", "SWC-105", "SWC-106", "SWC-110", "SWC-112", "SWC-113", "SWC-115", "SWC-116", "SWC-124", "SWC-127"];
-            const developedList = ["SWC-100", "SWC-102", "SWC-103", "SWC-107", "SWC-111", "SWC-114", "SWC-120", "SWC-123"];
+                const defaultList = ["SWC-101", "SWC-104", "SWC-105", "SWC-106", "SWC-110", "SWC-112", "SWC-113", "SWC-115", "SWC-116", "SWC-124", "SWC-127"];
+                const developedList = ["SWC-100", "SWC-102", "SWC-103", "SWC-107", "SWC-111", "SWC-114", "SWC-120", "SWC-123"];
 
-            const defaultCollapse = document.getElementById('home-collapse');
-            const developedCollapse = document.getElementById('dashboard-collapse');
+                const defaultCollapse = document.getElementById('home-collapse');
+                const developedCollapse = document.getElementById('dashboard-collapse');
 
-            if (defaultList.includes(swcCode)) {
-              defaultCollapse.classList.add('show');
-            } else if (developedList.includes(swcCode)) {
-              developedCollapse.classList.add('show');
-            }
-        </script>
-      
+                if (defaultList.includes(swcCode)) {
+                    defaultCollapse.classList.add('show');
+                } else if (developedList.includes(swcCode)) {
+                    developedCollapse.classList.add('show');
+                }
+            </script>
+
+            {% block swc_js %}
+            {% endblock %}
+
         {% endblock %}
     </div>
 {% endblock %}

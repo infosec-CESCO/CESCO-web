@@ -1,4 +1,3 @@
-```solidity
 contract Lotto {
 
     bool public payedOut = false;
@@ -18,4 +17,3 @@ contract Lotto {
         msg.sender.send(this.balance);
     }
 }
-```

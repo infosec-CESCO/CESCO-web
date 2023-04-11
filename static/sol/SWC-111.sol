@@ -1,4 +1,3 @@
-```solidity
 pragma solidity ^0.4.24;
 
 contract DeprecatedSimple {
@@ -28,4 +27,3 @@ contract DeprecatedSimple {
     function () public {}
 
 }
-```

@@ -1,4 +1,3 @@
-```solidity
 pragma solidity ^0.4.21;
 
 contract TokenSaleChallenge {
@@ -26,4 +25,3 @@ contract TokenSaleChallenge {
         msg.sender.transfer(numTokens * PRICE_PER_TOKEN);
     }
 }
-```

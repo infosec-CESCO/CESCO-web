@@ -1,4 +1,3 @@
-```solidity
 /*
  * @source: https://gist.github.com/wadeAlexC/7a18de852693b3f890560ab6a211a2b8
  * @author: Alexander Wade
@@ -28,4 +27,3 @@ contract FunctionTypes {
         func.f();
     }
 }
-```

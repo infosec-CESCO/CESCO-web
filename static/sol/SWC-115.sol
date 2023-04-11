@@ -1,4 +1,3 @@
-```solidity
 /*
  * @source: https://consensys.github.io/smart-contract-best-practices/recommendations/#avoid-using-txorigin
  * @author: Consensys Diligence  
@@ -21,4 +20,3 @@ contract MyContract {
     }
 
 }
-```

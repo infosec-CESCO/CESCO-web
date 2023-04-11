@@ -1,4 +1,3 @@
-```solidity
 pragma solidity ^0.4.24;
 
 contract HashForEther {
@@ -13,5 +12,3 @@ contract HashForEther {
          msg.sender.transfer(this.balance);
      }
 }
-
-```

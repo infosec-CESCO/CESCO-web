@@ -1,4 +1,3 @@
-```solidity
 pragma solidity ^0.4.24;
 
 /** Taken from the OpenZeppelin github
@@ -122,4 +121,3 @@ contract ERC20 {
     return true;
   }
 }
-```

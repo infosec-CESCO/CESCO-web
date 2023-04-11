@@ -1,4 +1,3 @@
-```solidity
 /*
  * @source: https://capturetheether.com/challenges/math/token-sale/
  * @author: Steve Marx
@@ -31,4 +30,3 @@ contract TokenSaleChallenge {
         msg.sender.transfer(numTokens * PRICE_PER_TOKEN);
     }
 }
-```

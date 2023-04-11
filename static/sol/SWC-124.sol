@@ -1,4 +1,3 @@
-```solidity
 pragma solidity ^0.4.25;
 
 contract Wallet {
@@ -32,4 +31,3 @@ contract Wallet {
         selfdestruct(msg.sender);
     }
 }
-```

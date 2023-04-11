@@ -1,4 +1,3 @@
-```solidity
 pragma solidity ^0.4.25;
 
 contract Bar {
@@ -14,4 +13,3 @@ contract Foo {
         return 42;
     }
 }
-```

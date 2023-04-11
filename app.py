@@ -5,7 +5,6 @@ from flask import Flask, render_template, request, flash
 from werkzeug.utils import secure_filename
 import subprocess
 import markdown2
-import markdown
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your-secret-key"
@@ -103,9 +102,8 @@ def swc_id_description(swc_id):
     md_code = data[swc_id]["code"]
     with open(md_code, 'r') as file:
         code = file.read()
-    html_code = markdown.markdown(code)
 
-    return render_template("swc_description.html", swc_description=html_content, code = html_code)
+    return render_template("swc_description.html", swc_description=html_content, code=code)
 
 
 if __name__ == "__main__":

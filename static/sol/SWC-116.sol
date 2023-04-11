@@ -1,4 +1,3 @@
-```solidity
 /*
  * @author: Kaden Zipfel
  */
@@ -31,4 +30,3 @@ contract TimeLock {
         require(success, 'transfer failed');
     }
 }
-```
