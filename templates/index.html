@@ -25,13 +25,15 @@
             <div class="mb-3">
                 <input type="checkbox" name="use_solv" id="use_solv" onchange="toggleSolvInput()">
                 <label for="use_solv" class="form-label">Use specific Solidity compiler version:</label>
-                <input type="text" name="solv_version" class="form-control" id="solv_version" disabled placeholder="0.8.4">
+                <input type="text" name="solv_version" class="form-control" id="solv_version" disabled
+                       placeholder="0.8.4">
             </div>
 
             <div class="mb-3">
                 <input type="checkbox" name="use_t" id="use_t" onchange="toggleTxInput()">
                 <label for="use_t" class="form-label">Use specific Transaction Count:</label>
-                <input type="text" name="transaction_count" class="form-control" id="transaction_count" disabled placeholder="2">
+                <input type="text" name="transaction_count" class="form-control" id="transaction_count" disabled
+                       placeholder="2">
             </div>
 
             <div class="mb-3">
@@ -56,15 +58,16 @@
             <div class="mythril-output mt-4">
                 <h2>Mythril Analysis Results:</h2>
                 {% for issue in mythril_json["issues"] %}
-                    <div class = "result">
+                    <div class="result">
                         <strong>Title:</strong> {{ issue["title"] }}<br>
-                        <strong>SWC-ID:</strong> <a href="/swc/{{ issue["swc-id"] }}"> {{ issue["swc-id"] }} </a><br>
+                        <strong>SWC-ID:</strong> <a href="/swc/SWC-{{ issue["swc-id"] }}"> {{ issue["swc-id"] }} </a><br>
                         <strong>Description:</strong> {{ issue["description"] }}<br>
                         <strong>Severity:</strong> {{ issue["severity"] }}<br>
                         <strong>Line number:</strong> {{ issue["lineno"] }}<br>
                         <strong>Contract:</strong> {{ issue["contract"] }}<br>
                         <strong>Function:</strong> {{ issue["function"] }}<br>
                         <strong>Code:</strong> {{ issue["code"] }}<br>
+                        <br>If you want to check more detail description about this issue, click <a href="/swc/SWC-{{ issue["swc-id"] }}"> here</a>.<br>
                     </div>
                 {% endfor %}
             </div>
@@ -87,7 +90,7 @@
             txCount.disabled = !useT.checked;
         }
 
-        document.getElementById("myForm").addEventListener("submit", function() {
+        document.getElementById("myForm").addEventListener("submit", function () {
             document.getElementById("spinner").style.display = "block";
         });
     </script>
