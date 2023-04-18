@@ -58,7 +58,7 @@
                 {% for issue in mythril_json["issues"] %}
                     <div class = "result">
                         <strong>Title:</strong> {{ issue["title"] }}<br>
-                        <strong>SWC-ID:</strong> {{ issue["swc-id"] }}<br>
+                        <strong>SWC-ID:</strong> <a href="/swc/{{ issue["swc-id"] }}"> {{ issue["swc-id"] }} </a><br>
                         <strong>Description:</strong> {{ issue["description"] }}<br>
                         <strong>Severity:</strong> {{ issue["severity"] }}<br>
                         <strong>Line number:</strong> {{ issue["lineno"] }}<br>
