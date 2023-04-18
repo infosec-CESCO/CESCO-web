@@ -76,13 +76,6 @@ def index():
 
     return render_template("index.html")
 
-
-@app.route("/opcodes", methods=["GET", "POST"])
-def opcodes():
-    with open("opcodes.json", 'r') as f:
-        data = json.load(f)
-    return render_template("opcodes.html", table_data=data)
-
 @app.route("/swc", methods=["GET", "POST"])
 def swc():
     with open("swc_simple.json", 'r') as f:
@@ -105,6 +98,20 @@ def swc_id_description(swc_id):
 
     return render_template("swc_description.html", swc_description=html_content, code=code)
 
+@app.route("/opcodes", methods=["GET", "POST"])
+def opcodes():
+    with open("opcodes.json", 'r') as f:
+        data = json.load(f)
+    return render_template("opcodes.html", table_data=data)
+
+@app.route("/about", methods=["GET", "POST"])
+def about():
+    with open("README.md", 'r') as f:
+        md_content = f.read()
+    md_parser = markdown2.Markdown()
+    html_content = md_parser.convert(md_content)
+
+    return render_template("about.html", about=html_content)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
