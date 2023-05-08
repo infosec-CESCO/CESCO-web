@@ -48,7 +48,10 @@ def index():
         use_t = request.form.get("use_t")
         transaction_count = request.form.get("transaction_count")
 
-        mythril_command = [MYTHRIL_PATH, mode, file_path, "-o", "json"]
+        mythril_command = [MYTHRIL_PATH, mode, file_path]
+        
+        if mode == "analyze":
+            mythril_command.extend(["-o", "json"])
 
         if use_solv == "on" and solv_version:
             mythril_command.extend(["--solv", solv_version])
@@ -65,14 +68,15 @@ def index():
             mythril_output = e.output.decode("utf-8")
 
         mythril_json = None
-        if mythril_output:
+        # if mythril_output:
+        if mode == "analyze":
             try:
                 mythril_json = json.loads(mythril_output)
             except json.JSONDecodeError as json_error:
                 print(f"Failed to parse JSON: {json_error}")
                 # flash("An error occurred while analyzing the Solidity code. Please try again.")
 
-        return render_template("index.html", mythril_output=mythril_output, mythril_json=mythril_json)
+        return render_template("index.html", mythril_output=mythril_output, mythril_json=mythril_json, mode = mode)
 
     return render_template("index.html")
 
