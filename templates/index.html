@@ -25,20 +25,34 @@
             <div class="mb-3">
                 <input type="checkbox" name="use_solv" id="use_solv" onchange="toggleSolvInput()">
                 <label for="use_solv" class="form-label">Use specific Solidity compiler version:</label>
-                <input type="text" name="solv_version" class="form-control" id="solv_version" disabled
-                       placeholder="0.8.4">
+                <input type="text" name="solv_version" class="form-control" id="solv_version" disabled placeholder="0.8.4">
             </div>
 
             <div class="mb-3">
                 <input type="checkbox" name="use_t" id="use_t" onchange="toggleTxInput()">
                 <label for="use_t" class="form-label">Use specific Transaction Count:</label>
-                <input type="text" name="transaction_count" class="form-control" id="transaction_count" disabled
-                       placeholder="2">
+                <input type="text" name="transaction_count" class="form-control" id="transaction_count" disabled placeholder="2">
             </div>
 
             <div class="mb-3">
+                <input type="checkbox" name="use_mc" id="use_mc" onchange="toggleMCInput()">
+                <label for="use_mc" class="form-label">Multi contract</label>
+            </div>
+
+            <div class="mb-3" id="single_file">
                 <label for="file" class="form-label">Upload a Solidity file:</label>
                 <input type="file" name="file" class="form-control" id="file">
+            </div>
+            
+            <div id="multi_file" style="display: none;">
+                <div class="mb-3">
+                    <label for="main_file" class="form-label">Main Solidity file:</label>
+                    <input type="file" name="main_file" class="form-control" id="main_file">
+                </div>
+                <div class="mb-3">
+                    <label for="sub_file" class="form-label">Sub Solidity file:</label>
+                    <input type="file" name="sub_file" class="form-control" id="sub_file">
+                </div>
             </div>
 
             <div class="mb-3">
@@ -96,6 +110,19 @@
             const txCount = document.getElementById("transaction_count");
             txCount.disabled = !useT.checked;
         }
+
+        function toggleMCInput() {
+            const useMC = document.getElementById("use_mc");
+            const singleFile = document.getElementById("single_file");
+            const multiFile = document.getElementById("multi_file");
+            singleFile.style.display = useMC.checked ? "none" : "block";
+            multiFile.style.display = useMC.checked ? "block" : "none";
+
+        }
+
+        document.getElementById("myForm").addEventListener("submit", function () {
+            document.getElementById("spinner").style.display = "block";
+        });
 
         document.getElementById("myForm").addEventListener("submit", function () {
             document.getElementById("spinner").style.display = "block";

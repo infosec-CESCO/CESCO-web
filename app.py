@@ -20,35 +20,68 @@ def index():
         code = request.form.get("code")
         mode = request.form["mode"]
 
-        if file:
-            filename = secure_filename(file.filename)
-            _, file_ext = os.path.splitext(filename)
-
-            if file_ext != ".sol":
-                flash("Please upload a Solidity (.sol) file.")
-                return render_template("index.html")
-
-            temp_dir = tempfile.mkdtemp()
-            file.save(os.path.join(temp_dir, filename))
-            file_path = os.path.join(temp_dir, filename)
-
-        elif code:
-            temp_file = tempfile.NamedTemporaryFile(mode="w", dget_flashed_messageselete=False, suffix=".sol")
-            temp_file.write(code)
-            temp_file.close()
-            file_path = temp_file.name
-
-        else:
-            flash("Please provide a Solidity file or enter the code.")
-            return render_template("index.html")
-
         use_solv = request.form.get("use_solv")
         solv_version = request.form.get("solv_version")
 
         use_t = request.form.get("use_t")
         transaction_count = request.form.get("transaction_count")
 
-        mythril_command = [MYTHRIL_PATH, mode, file_path]
+        use_mc = request.form.get("use_mc")
+        if use_mc:
+            main_file = request.files.get("main_file")
+            sub_file = request.files.get("sub_file")
+
+            if main_file:
+                main_filename = secure_filename(main_file.filename)
+                _, file_ext = os.path.splitext(main_filename)
+
+                if file_ext != ".sol":
+                    flash("Please upload a Solidity (.sol) file.")
+                    return render_template("index.html")
+
+                temp_dir = tempfile.mkdtemp()
+                main_file.save(os.path.join(temp_dir, main_filename))
+                main_file_path = os.path.join(temp_dir, main_filename)
+
+            if sub_file:
+                sub_filename = secure_filename(sub_file.filename)
+                _, file_ext = os.path.splitext(sub_filename)
+
+                if file_ext != ".sol":
+                    flash("Please upload a Solidity (.sol) file.")
+                    return render_template("index.html")
+
+                temp_dir = tempfile.mkdtemp()
+                sub_file.save(os.path.join(temp_dir, sub_filename))
+                sub_file_path = os.path.join(temp_dir, sub_filename)
+
+            mythril_command = [MYTHRIL_PATH, mode, "-mc", main_file_path, sub_file_path]
+            flash(mythril_command)
+
+        else: 
+            if file:
+                filename = secure_filename(file.filename)
+                _, file_ext = os.path.splitext(filename)
+
+                if file_ext != ".sol":
+                    flash("Please upload a Solidity (.sol) file.")
+                    return render_template("index.html")
+
+                temp_dir = tempfile.mkdtemp()
+                file.save(os.path.join(temp_dir, filename))
+                file_path = os.path.join(temp_dir, filename)
+
+            elif code:
+                temp_file = tempfile.NamedTemporaryFile(mode="w", dget_flashed_messageselete=False, suffix=".sol")
+                temp_file.write(code)
+                temp_file.close()
+                file_path = temp_file.name
+
+            else:
+                flash("Please provide a Solidity file or enter the code.")
+                return render_template("index.html")
+
+            mythril_command = [MYTHRIL_PATH, mode, file_path]
         
         if mode == "analyze":
             mythril_command.extend(["-o", "json"])
